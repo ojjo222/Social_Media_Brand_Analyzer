@@ -26,6 +26,7 @@ def load_synth(path):
 
 syn_gem = load_synth("synthetic_gemini.csv")
 syn_grq = load_synth("synthetic_groq.csv")
+syn_or = load_synth("synthetic_openrouter.csv")
 
 if "brand" not in yt_real.columns:
     yt_real["brand"] = "unknown"
@@ -43,8 +44,9 @@ yt_real = normalize(yt_real)
 tw_real = normalize(tw_real)
 syn_gem = normalize(syn_gem)
 syn_grq = normalize(syn_grq)
+syn_or = normalize(syn_or)
 
-df = pd.concat([yt_real, tw_real, syn_gem, syn_grq], ignore_index=True)
+df = pd.concat([yt_real, tw_real, syn_gem, syn_grq, syn_or], ignore_index=True)
 print(f"Combined: {len(df)} rows")
 
 df = df.dropna(subset=["text"])

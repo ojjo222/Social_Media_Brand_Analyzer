@@ -18,11 +18,13 @@ PLATFORM_TARGETS = {
     
 }
 
-GEMINI_SHARE = 0.5
-GROQ_SHARE   = 0.5
+GEMINI_SHARE = 0.1
+GROQ_SHARE   = 0.8
+OPENROUTER_SHARE = 0.1
 
 COMMENTS_PER_REQUEST = 30
 
 GEMINI_OUTPUT = "synthetic_gemini.csv"
 GROQ_OUTPUT   = "synthetic_groq.csv"
+OPENROUTER_OUTPUT = "synthetic_openrouter.csv"
 PROGRESS_FILE = "synthetic_progress.json"  
