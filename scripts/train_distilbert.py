@@ -123,6 +123,18 @@ def train_model(
     out_path = Path(output_dir)
     out_path.mkdir(parents=True, exist_ok=True)
 
+    # Strict leakage validation
+    train_clean = set(train_df["clean_text"])
+    val_clean = set(val_df["clean_text"])
+    val_leakage = train_clean.intersection(val_clean)
+    if val_leakage:
+        raise ValueError(f"Data leakage detected: {len(val_leakage)} samples overlap between train and validation.")
+    if test_df is not None:
+        test_clean = set(test_df["clean_text"])
+        test_leakage = train_clean.intersection(test_clean)
+        if test_leakage:
+            raise ValueError(f"Data leakage detected: {len(test_leakage)} samples overlap between train and test.")
+
     logger.info("Loading base tokenizer and model: %s", model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -156,6 +168,8 @@ def train_model(
         per_device_eval_batch_size=batch_size * 2,
         num_train_epochs=epochs,
         weight_decay=0.01,
+        seed=42,
+        data_seed=42,
         fp16=fp16 and torch.cuda.is_available(),
         logging_steps=100,
         save_total_limit=1,
@@ -230,9 +244,13 @@ def train_model(
 
 def main():
     parser = argparse.ArgumentParser(description="Fine-tune DistilBERT on Sentiment Classification dataset")
-    parser.add_argument("--train-data", default="data/benchmark/train.csv", help="Path to training CSV")
-    parser.add_argument("--val-data", default="data/benchmark/validation.csv", help="Path to validation CSV")
-    parser.add_argument("--test-data", default="data/benchmark/test.csv", help="Path to untouched test CSV")
+    default_train = "data/benchmark/distilbert_v2/train.csv" if os.path.exists("data/benchmark/distilbert_v2/train.csv") else "data/benchmark/train.csv"
+    default_val = "data/benchmark/distilbert_v2/validation.csv" if os.path.exists("data/benchmark/distilbert_v2/validation.csv") else "data/benchmark/validation.csv"
+    default_test = "data/benchmark/distilbert_v2/test.csv" if os.path.exists("data/benchmark/distilbert_v2/test.csv") else "data/benchmark/test.csv"
+
+    parser.add_argument("--train-data", default=default_train, help="Path to training CSV")
+    parser.add_argument("--val-data", default=default_val, help="Path to validation CSV")
+    parser.add_argument("--test-data", default=default_test, help="Path to untouched test CSV")
     parser.add_argument("--output-dir", default="models/distilbert/gfg_distilbert_sentiment_v2", help="Model output directory")
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--batch-size", type=int, default=32)

@@ -26,6 +26,8 @@ class DistilBertSentimentAnalyzer:
         self.model_dir = model_dir
         self.tokenizer = None
         self.model = None
+        self.model_path = None
+        self.version = "unknown"
         self.id2label = DEFAULT_ID2LABEL.copy()
 
         if device:
@@ -37,9 +39,17 @@ class DistilBertSentimentAnalyzer:
 
     def _resolve_model_path(self, model_dir: str) -> Path:
         base_path = Path(model_dir)
-        nested_path = base_path / "gfg_distilbert_sentiment"
-        if nested_path.exists() and (nested_path / "config.json").exists():
-            return nested_path
+        # 1. Direct path check
+        if (base_path / "config.json").exists():
+            return base_path
+        # 2. Prefer v2 when present
+        v2_path = base_path / "gfg_distilbert_sentiment_v2"
+        if v2_path.exists() and (v2_path / "config.json").exists():
+            return v2_path
+        # 3. Fallback to v1
+        v1_path = base_path / "gfg_distilbert_sentiment"
+        if v1_path.exists() and (v1_path / "config.json").exists():
+            return v1_path
         return base_path
 
     def load(self, model_dir: Optional[str] = None):
@@ -49,12 +59,21 @@ class DistilBertSentimentAnalyzer:
         if not resolved_path.exists() or not (resolved_path / "config.json").exists():
             self.tokenizer = None
             self.model = None
+            self.model_path = None
+            self.version = "unknown"
             return
 
-        self.tokenizer = AutoTokenizer.from_pretrained(str(resolved_path))
-        self.model = AutoModelForSequenceClassification.from_pretrained(str(resolved_path))
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(str(resolved_path), local_files_only=True)
+            self.model = AutoModelForSequenceClassification.from_pretrained(str(resolved_path), local_files_only=True)
+        except Exception:
+            self.tokenizer = AutoTokenizer.from_pretrained(str(resolved_path))
+            self.model = AutoModelForSequenceClassification.from_pretrained(str(resolved_path))
+
         self.model.to(self.device)
         self.model.eval()
+        self.model_path = str(resolved_path)
+        self.version = "v2" if "v2" in resolved_path.name.lower() else "v1"
 
         if hasattr(self.model.config, "id2label") and self.model.config.id2label:
             self.id2label = {int(k): str(v) for k, v in self.model.config.id2label.items()}

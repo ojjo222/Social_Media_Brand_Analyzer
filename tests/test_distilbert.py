@@ -18,6 +18,23 @@ def test_distilbert_analyzer_loaded():
     assert analyzer.id2label[2] == "positive"
 
 
+def test_distilbert_v2_preferred_by_default():
+    analyzer = DistilBertSentimentAnalyzer()
+    assert analyzer.is_loaded() is True
+    assert analyzer.version == "v2"
+    assert "gfg_distilbert_sentiment_v2" in analyzer.model_path
+
+
+def test_distilbert_v1_explicit_loading():
+    analyzer = DistilBertSentimentAnalyzer(model_dir="models/distilbert/gfg_distilbert_sentiment")
+    assert analyzer.is_loaded() is True
+    assert analyzer.version == "v1"
+    assert "gfg_distilbert_sentiment" in analyzer.model_path
+    assert analyzer.id2label[0] == "negative"
+    assert analyzer.id2label[1] == "neutral"
+    assert analyzer.id2label[2] == "positive"
+
+
 def test_distilbert_predict_positive():
     analyzer = DistilBertSentimentAnalyzer()
     res = analyzer.predict("I absolutely love this product! Super fast delivery and amazing quality.")
