@@ -423,7 +423,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ## 13. Testing
 
-The project maintains an automated test suite with **57 passing unit and integration tests**:
+The project maintains an automated test suite with **69 passing unit and integration tests**:
 
 Run the full test suite:
 ```bash
@@ -431,6 +431,7 @@ python -m pytest -v
 ```
 
 ### Test Suite Structure:
+- `tests/test_label_csv.py`: 12 tests covering CSV validation, ID/comment auto-detection, null/empty comment safety, sentiment segregation, schema uniformity, and row invariants.
 - `tests/test_distilbert.py`: 10 tests covering transformer loading, device fallback, tokenization, confidence ranges, edge cases, and batched inferences.
 - `tests/test_sentiment_factory.py`: 4 tests validating dynamic model selection, fallback logic, and uniform interfaces.
 - `tests/test_sentiment.py`: 6 tests verifying TF-IDF baseline loading and inferences.
@@ -442,7 +443,55 @@ python -m pytest -v
 
 ---
 
-## 14. Limitations
+## 14. P1 → P3 Inference Pipeline & Data Handoff
+
+The system provides a dedicated batch inference and data segregation pipeline designed for seamless inter-phase workflow execution:
+
+```text
+Raw comments
+      ↓
+DistilBERT
+      ↓
+Sentiment-labeled data
+      ↓
+┌─────────────┬─────────────┬─────────────┐
+│ positive    │ negative    │ neutral     │
+│ CSV         │ CSV         │ CSV         │
+└─────────────┴─────────────┴─────────────┘
+                    ↓
+             negative.csv
+                    ↓
+             P3 clustering
+```
+
+### Workflow Responsibilities:
+1. **P1 Responsibility (Sentiment Classification & Segregation)**:
+   - Receives raw comments CSV (e.g. `data/raw/comments.csv`).
+   - Runs the fine-tuned DistilBERT model using batched inference with GPU acceleration (or automatic CPU fallback).
+   - Generates predictions including `sentiment` and `confidence` while preserving original comments, IDs, and metadata (`brand`, `platform`).
+   - Validates the count invariant:
+     $$\text{positive\_count} + \text{negative\_count} + \text{neutral\_count} = \text{total\_processed}$$
+   - Automatically segregates results into three distinct output files:
+     - `data/processed/positive.csv`
+     - `data/processed/negative.csv`
+     - `data/processed/neutral.csv`
+
+2. **P3 Responsibility (Complaint Clustering)**:
+   - **Consumes**: `data/processed/negative.csv` as its primary input.
+   - **Expected Schema**: Each row contains at minimum `id`, `comment`, and `sentiment` (along with `confidence`, `brand`, `platform`).
+   - Runs negative comments through the complaint clustering engine (TF-IDF + K-Means) to extract complaint themes, cluster IDs, and actionable insights.
+
+### Running Batch Inference & CSV Segregation:
+```powershell
+python scripts/label_csv.py `
+    --input data/raw/comments.csv `
+    --output-dir data/processed/ `
+    --batch-size 32
+```
+
+---
+
+## 15. Limitations
 
 1. **CPU Latency**: While DistilBERT is optimized (~66M parameters), CPU inference on local Windows hardware averages ~35–60ms per comment compared to ~0.5ms for TF-IDF. For ultra-high throughput without a GPU, the TF-IDF engine can be selected via `SENTIMENT_MODEL=tfidf`.
 2. **Context Window**: Comments are tokenized up to a `max_length` of 128 tokens, which covers >99% of social media comments but truncates long blog posts or reviews.
@@ -450,7 +499,7 @@ python -m pytest -v
 
 ---
 
-## 15. Future Improvements
+## 16. Future Improvements
 
 1. **Quantization & ONNX Runtime**: Export DistilBERT to ONNX format with INT8 quantization to achieve sub-10ms CPU latency.
 2. **Multi-label Complaint Tagging**: Train a multi-label classification head to detect multi-issue complaints (e.g., Delivery Delay AND Damaged Item).
