@@ -1,0 +1,16 @@
+platform,brand,comment,sentiment,cluster,complaint_category
+Instagram,Samsung,Battery drains very quickly,Negative,0,Battery Issues
+YouTube,Samsung,Phone battery is terrible,Negative,0,Battery Issues
+Reddit,Samsung,Battery does not last a day,Negative,0,Battery Issues
+Instagram,Samsung,Customer support never replied,Negative,1,Customer Service
+YouTube,Samsung,Customer service was useless,Negative,1,Customer Service
+Reddit,Samsung,Nobody helped with my complaint,Negative,1,Customer Service
+Instagram,Samsung,Phone stopped working after one month,Negative,2,Product Quality
+YouTube,Samsung,The phone quality is disappointing,Negative,2,Product Quality
+Reddit,Samsung,Device broke very quickly,Negative,2,Product Quality
+Instagram,Samsung,Delivery was extremely late,Negative,3,Delivery Issues
+YouTube,Samsung,My order arrived five days late,Negative,3,Delivery Issues
+Reddit,Samsung,Shipping took too long,Negative,3,Delivery Issues
+Instagram,Samsung,The phone is too expensive,Negative,4,Pricing
+YouTube,Samsung,Price is not worth it,Negative,4,Pricing
+Reddit,Samsung,Too expensive for these features,Negative,4,Pricing
