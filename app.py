@@ -450,33 +450,73 @@ if not df.empty:
 else:
     st.info("No complaint data is available.")
 
-# Complaint Recommendation System
+# AI Complaint Recommendation System
 
-st.header("Recommended Actions for the Brand")
+st.divider()
+st.header("🤖 AI-Generated Recommendations")
 
-if "complaint_category" in df.columns and not df.empty:
+try:
+    ai_df = pd.read_csv("ai_recommendations.csv")
 
-    counts = df["complaint_category"].value_counts()
+    required_ai = [
+        "complaint_category",
+        "ai_recommendation"
+    ]
 
-    recommendations = {
-        "Battery Issues": "Investigate battery usage and improve battery life.",
-        "Customer Service": "Improve customer support response times.",
-        "Product Quality": "Strengthen product testing and quality checks.",
-        "Delivery Issues": "Improve shipping and delivery tracking.",
-        "Pricing": "Review pricing and improve value for money."
-    }
+    missing_ai = [
+        col for col in required_ai
+        if col not in ai_df.columns
+    ]
 
-    for category, count in counts.items():
-        st.subheader(category)
-        st.write("Total complaints:", count)
-        st.write(
-            "Suggested action:",
-            recommendations.get(
-                category,
-                "Review comments to identify suitable improvements."
-            )
+    if missing_ai:
+        st.warning(
+            f"Missing columns in ai_recommendations.csv: {missing_ai}"
         )
-        st.divider()
 
-else:
-    st.info("No complaint categories available yet.")
+    elif ai_df.empty:
+        st.info("No AI recommendations are available yet.")
+
+    else:
+        # Show recommendations for selected categories
+        ai_df = ai_df[
+            ai_df["complaint_category"].isin(selected_categories)
+        ]
+
+        if ai_df.empty:
+            st.info(
+                "No recommendations match the selected categories."
+            )
+
+        else:
+            st.write(
+                "AI-generated actions based on the customer feedback."
+            )
+
+            for _, row in ai_df.iterrows():
+                category = row["complaint_category"]
+                recommendation = row["ai_recommendation"]
+
+                st.subheader(f"📌 {category}")
+
+                if "number_of_comments" in ai_df.columns:
+                    st.caption(
+                        f"Comments analyzed: "
+                        f"{row['number_of_comments']}"
+                    )
+
+                # Convert literal newline characters to real line breaks
+                recommendation = str(recommendation).replace(
+                    "\\n", "\n"
+                )
+
+                st.markdown(recommendation)
+                st.divider()
+
+except FileNotFoundError:
+    st.warning(
+        "ai_recommendations.csv was not found. "
+        "Run `python recommendations.py` first."
+    )
+
+
+
