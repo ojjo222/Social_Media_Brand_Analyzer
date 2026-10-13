@@ -170,3 +170,313 @@ if not filtered_df.empty:
 
 else:
     st.warning("No comments match your selected filters.")
+
+
+# ----------------------------------
+# Improved BERTopic Analysis
+# ----------------------------------
+
+st.divider()
+st.header("🧠 Complaint Topic Analysis")
+
+try:
+    topic_df = pd.read_csv("integrated_results.csv")
+    summary_df = pd.read_csv("topic_summary.csv")
+
+    # Remove rows with missing topic IDs
+    topic_df = topic_df.dropna(
+        subset=["discovered_topic"]
+    ).copy()
+
+    topic_df["discovered_topic"] = (
+        topic_df["discovered_topic"].astype(int)
+    )
+
+    # Keep only real discovered topics, not outliers
+    valid_topics = summary_df[
+        summary_df["Topic"] != -1
+    ].copy()
+
+    if valid_topics.empty:
+        st.warning(
+            "No regular topics were discovered. "
+            "Try collecting more varied comments."
+        )
+
+    else:
+        # Count comments in each topic
+        counts = (
+            topic_df[
+                topic_df["discovered_topic"] != -1
+            ]
+            .groupby("discovered_topic")
+            .size()
+            .to_dict()
+        )
+
+        # Add comment counts to the topic summary
+        valid_topics["Comment Count"] = (
+            valid_topics["Topic"]
+            .map(counts)
+            .fillna(0)
+            .astype(int)
+        )
+
+        # Display topic names and descriptions
+        st.subheader("Discovered Topics")
+
+        display_columns = [
+            col for col in [
+                "Topic",
+                "Name",
+                "Representation",
+                "Comment Count"
+            ]
+            if col in valid_topics.columns
+        ]
+
+        st.dataframe(
+            valid_topics[display_columns],
+            use_container_width=True,
+            hide_index=True
+        )
+
+        # Interactive chart
+        st.subheader("Topic Comparison")
+
+        chart_df = valid_topics[
+            ["Topic", "Comment Count"]
+        ].copy()
+
+        chart_df["Topic"] = (
+            "Topic " + chart_df["Topic"].astype(str)
+        )
+
+        fig = px.bar(
+            chart_df,
+            x="Topic",
+            y="Comment Count",
+            text="Comment Count",
+            title="Number of Comments per Topic"
+        )
+
+        st.plotly_chart(
+            fig,
+            use_container_width=True
+        )
+
+        # Inspect comments in a selected topic
+        topic_ids = sorted(
+            valid_topics["Topic"].astype(int).tolist()
+        )
+
+        selected_topic = st.selectbox(
+            "Choose a topic to inspect",
+            topic_ids
+        )
+
+        selected_rows = topic_df[
+            topic_df["discovered_topic"] == selected_topic
+        ]
+
+        st.subheader(f"Comments in Topic {selected_topic}")
+
+        st.dataframe(
+            selected_rows[
+                [
+                    col for col in [
+                        "platform",
+                        "brand",
+                        "comment",
+                        "discovered_topic"
+                    ]
+                    if col in selected_rows.columns
+                ]
+            ],
+            use_container_width=True,
+            hide_index=True
+        )
+
+        # Download topic report
+        report_csv = valid_topics.to_csv(
+            index=False
+        ).encode("utf-8")
+
+        st.download_button(
+            "Download Topic Summary",
+            data=report_csv,
+            file_name="topic_report.csv",
+            mime="text/csv"
+        )
+
+    # Show outliers separately
+    outliers = topic_df[
+        topic_df["discovered_topic"] == -1
+    ]
+
+    with st.expander("View unassigned comments"):
+        st.write(
+            f"Unassigned comments: {len(outliers)}"
+        )
+
+        if not outliers.empty:
+            st.dataframe(
+                outliers[
+                    [
+                        col for col in [
+                            "platform",
+                            "brand",
+                            "comment"
+                        ]
+                        if col in outliers.columns
+                    ]
+                ],
+                use_container_width=True,
+                hide_index=True
+            )
+
+except FileNotFoundError:
+    st.warning(
+        "Topic files not found. Run bertopic_model.py "
+        "and integrate_topics.py first."
+    )
+
+# ----------------------------------
+# Overall Sentiment Analysis
+# ----------------------------------
+
+st.divider()
+st.header("😊 Overall Sentiment Analysis")
+
+try:
+    # Load the complete sample dataset
+    sentiment_df = pd.read_csv(
+        "sample_clustering_results.csv"
+    )
+
+    # Count positive, negative, and neutral comments
+    sentiment_counts = (
+        sentiment_df["sentiment"]
+        .str.strip()
+        .str.title()
+        .value_counts()
+        .reindex(
+            ["Positive", "Negative", "Neutral"],
+            fill_value=0
+        )
+    )
+
+    # Display sentiment chart
+    fig_sentiment = px.pie(
+        names=sentiment_counts.index,
+        values=sentiment_counts.values,
+        title="Distribution of All Sentiments",
+        hole=0.35
+    )
+
+    st.plotly_chart(
+        fig_sentiment,
+        use_container_width=True
+    )
+
+    # Display sentiment counts
+    col1, col2, col3 = st.columns(3)
+
+    col1.metric(
+        "Positive",
+        int(sentiment_counts["Positive"])
+    )
+
+    col2.metric(
+        "Negative",
+        int(sentiment_counts["Negative"])
+    )
+
+    col3.metric(
+        "Neutral",
+        int(sentiment_counts["Neutral"])
+    )
+
+except FileNotFoundError:
+    st.warning("Sample dataset was not found.")
+
+# ----------------------------------
+# Complaint Insights
+# ----------------------------------
+
+st.divider()
+st.header("💡 Complaint Insights")
+
+if not df.empty:
+    # Find the most common complaint category
+    complaint_counts = (
+        df["complaint_category"].value_counts()
+    )
+
+    top_category = complaint_counts.index[0]
+    top_count = int(complaint_counts.iloc[0])
+
+    percentage = (
+        top_count / len(df) * 100
+    )
+
+    st.subheader("Most Common Complaint")
+
+    st.metric(
+        "Top Complaint Category",
+        top_category,
+        f"{percentage:.1f}% of negative comments"
+    )
+
+    # Display example comments
+    st.subheader("Example Comments")
+
+    examples = df[
+        df["complaint_category"] == top_category
+    ]
+
+    st.dataframe(
+        examples[
+            [
+                "platform",
+                "comment",
+                "complaint_category"
+            ]
+        ].head(5),
+        use_container_width=True,
+        hide_index=True
+    )
+
+else:
+    st.info("No complaint data is available.")
+
+# Complaint Recommendation System
+
+st.header("Recommended Actions for the Brand")
+
+if "complaint_category" in df.columns and not df.empty:
+
+    counts = df["complaint_category"].value_counts()
+
+    recommendations = {
+        "Battery Issues": "Investigate battery usage and improve battery life.",
+        "Customer Service": "Improve customer support response times.",
+        "Product Quality": "Strengthen product testing and quality checks.",
+        "Delivery Issues": "Improve shipping and delivery tracking.",
+        "Pricing": "Review pricing and improve value for money."
+    }
+
+    for category, count in counts.items():
+        st.subheader(category)
+        st.write("Total complaints:", count)
+        st.write(
+            "Suggested action:",
+            recommendations.get(
+                category,
+                "Review comments to identify suitable improvements."
+            )
+        )
+        st.divider()
+
+else:
+    st.info("No complaint categories available yet.")
