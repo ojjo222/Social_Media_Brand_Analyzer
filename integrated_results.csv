@@ -1,0 +1,16 @@
+platform,brand,comment,sentiment,cluster,discovered_topic,topic_name
+Instagram,Samsung,Battery drains very quickly,Negative,0,-1,Unassigned / Outlier
+YouTube,Samsung,Phone battery is terrible,Negative,0,0,0_battery_phone_does_month
+Reddit,Samsung,Battery does not last a day,Negative,0,0,0_battery_phone_does_month
+Instagram,Samsung,Customer support never replied,Negative,1,1,1_my_complaint_order_nobody
+YouTube,Samsung,Customer service was useless,Negative,1,-1,Unassigned / Outlier
+Reddit,Samsung,Nobody helped with my complaint,Negative,1,1,1_my_complaint_order_nobody
+Instagram,Samsung,Phone stopped working after one month,Negative,2,0,0_battery_phone_does_month
+YouTube,Samsung,The phone quality is disappointing,Negative,2,-1,Unassigned / Outlier
+Reddit,Samsung,Device broke very quickly,Negative,2,-1,Unassigned / Outlier
+Instagram,Samsung,Delivery was extremely late,Negative,3,-1,Unassigned / Outlier
+YouTube,Samsung,My order arrived five days late,Negative,3,1,1_my_complaint_order_nobody
+Reddit,Samsung,Shipping took too long,Negative,3,-1,Unassigned / Outlier
+Instagram,Samsung,The phone is too expensive,Negative,4,-1,Unassigned / Outlier
+YouTube,Samsung,Price is not worth it,Negative,4,-1,Unassigned / Outlier
+Reddit,Samsung,Too expensive for these features,Negative,4,-1,Unassigned / Outlier
