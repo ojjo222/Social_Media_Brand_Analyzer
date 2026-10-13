@@ -1,0 +1,4 @@
+Topic,Count,Name,Representation,Representative_Docs
+-1,9,-1_too_is_was_the,"['too', 'is', 'was', 'the', 'quickly', 'expensive', 'very', 'phone', 'features', 'for']","['The phone quality is disappointing', 'Too expensive for these features', 'The phone is too expensive']"
+0,3,0_battery_phone_does_month,"['battery', 'phone', 'does', 'month', 'one', 'day', 'terrible', 'last', 'stopped', 'working']","['Phone battery is terrible', 'Battery does not last a day', 'Phone stopped working after one month']"
+1,3,1_my_complaint_order_nobody,"['my', 'complaint', 'order', 'nobody', 'replied', 'helped', 'support', 'never', 'arrived', 'with']","['Customer support never replied', 'Nobody helped with my complaint', 'My order arrived five days late']"
