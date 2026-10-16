@@ -505,3 +505,120 @@ python scripts/label_csv.py `
 2. **Multi-label Complaint Tagging**: Train a multi-label classification head to detect multi-issue complaints (e.g., Delivery Delay AND Damaged Item).
 3. **Aspect-Based Sentiment Analysis (ABSA)**: Parse sentiment for distinct entities (e.g., Delivery vs. Product Quality) within a single post.
 4. **Active Learning**: Store low-confidence inferences for periodic retraining.
+
+---
+
+## 17. Sentence Embedding Clustering (Member 3)
+
+This section documents the upgraded complaint clustering pipeline that replaces sparse TF-IDF vectors with dense semantic sentence embeddings.
+
+### 17.1 — What Changed
+
+| Component | Before | After |
+|-----------|--------|-------|
+| Feature representation | TF-IDF (5000-dim sparse) | Sentence Embeddings (384-dim dense) |
+| Algorithm | K-Means only | K-Means **and** DBSCAN |
+| Semantic understanding | Word frequency | Meaning / context |
+
+### 17.2 — Installation
+
+`sentence-transformers` is already included in `requirements.txt`. Install all dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+The model (`all-MiniLM-L6-v2`) is downloaded automatically on first use from Hugging Face Hub.
+
+### 17.3 — Training the Clustering Model
+
+**K-Means on sentence embeddings** (recommended, deterministic):
+
+```python
+from src.clustering.clusterer import ComplaintClusterer
+
+clusterer = ComplaintClusterer()
+clusterer.train_embeddings(texts, n_clusters=7)
+result = clusterer.predict("My order never arrived")
+# → {"cluster_id": 2, "cluster_label": "cluster_2", "complaint_category": "Delivery Problems"}
+```
+
+**DBSCAN on sentence embeddings** (density-based, no need to choose K upfront):
+
+```python
+clusterer.train_dbscan(texts, eps=0.4, min_samples=5)
+# cluster_id = -1 means the comment is a noise point (no cluster)
+```
+
+### 17.4 — Switching Between Methods
+
+| Method | Constructor Argument | When to Use |
+|--------|---------------------|-------------|
+| TF-IDF K-Means (legacy) | `clusterer.train(texts, n_clusters)` | Fast baseline, no GPU needed |
+| Embedding K-Means | `clusterer.train_embeddings(texts, n_clusters)` | Best silhouette score, deterministic |
+| Embedding DBSCAN | `clusterer.train_dbscan(texts, eps, min_samples)` | Handles outliers, no K required |
+
+### 17.5 — Exporting Clustered Results for the Dashboard
+
+Run the export script to generate `data/processed/clustered_comments.csv`:
+
+```bash
+python scripts/export_clustered_complaints.py
+```
+
+**Output CSV columns:**
+
+| Column | Description |
+|--------|-------------|
+| `platform` | Social media platform (twitter, instagram, etc.) |
+| `brand` | Brand name (Amazon, PhonePe, etc.) |
+| `comment` | Original comment text |
+| `sentiment` | positive / neutral / negative |
+| `cluster_id` | Integer cluster ID (−1 = noise for DBSCAN) |
+| `cluster_label` | Short label (e.g., `cluster_2`) |
+| `complaint_category` | Business theme (e.g., Delivery Problems) |
+
+**Loading in the dashboard (Member 4):**
+
+```python
+import pandas as pd
+df = pd.read_csv("data/processed/clustered_comments.csv")
+negative_df = df[df["sentiment"] == "negative"]
+```
+
+### 17.6 — Evaluating Cluster Quality
+
+Run the K-selection evaluation script to find the best number of clusters:
+
+```bash
+python scripts/evaluate_embeddings_clustering.py
+```
+
+Compare K-Means vs DBSCAN:
+
+```bash
+python scripts/compare_clustering_methods.py
+# Output: reports/clustering_comparison.json
+```
+
+### 17.7 — Running Tests
+
+**Unit tests (fast, no model download):**
+
+```bash
+python -m pytest tests/test_clustering.py -v -m "not integration"
+```
+
+**Integration test (downloads model, runs end-to-end):**
+
+```bash
+python -m pytest tests/test_clustering.py -v -m "integration"
+```
+
+### 17.8 — Known Limitations
+
+- **Cluster labels are generic** (`cluster_0`, `cluster_1`, …) when no TF-IDF vectorizer is used. The `infer_theme_category` function maps them to business themes using keyword heuristics.
+- **DBSCAN noise points** (`cluster_id = -1`) are valid outputs — they represent comments that don't fit into any dense cluster.
+- **Silhouette scores across different feature spaces** (TF-IDF vs embeddings) are not directly comparable.
+- **Model download required on first run** — the `all-MiniLM-L6-v2` model (~90 MB) is fetched from Hugging Face Hub automatically.
+
