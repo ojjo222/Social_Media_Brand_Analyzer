@@ -83,29 +83,65 @@ class ComplaintClusterer:
             self.cluster_labels[str(i)] = keywords
             self.cluster_themes[str(i)] = infer_theme_category(keywords)
 
+    def _generate_embedding_cluster_labels(self, texts: List[str], cluster_ids: List[int], n_clusters: int, top_n: int = 3):
+        self.cluster_labels = {}
+        self.cluster_themes = {}
+        for i in range(n_clusters):
+            c_texts = [texts[idx] for idx, cid in enumerate(cluster_ids) if cid == i]
+            if c_texts:
+                try:
+                    c_vec = TfidfVectorizer(max_features=50, stop_words="english", ngram_range=(1, 2))
+                    X = c_vec.fit_transform(c_texts)
+                    mean_scores = X.mean(axis=0).A1
+                    top_idx = mean_scores.argsort()[-top_n:][::-1]
+                    terms = c_vec.get_feature_names_out()
+                    keywords = " ".join([terms[idx] for idx in top_idx if idx < len(terms)])
+                except Exception:
+                    keywords = f"cluster_{i}"
+            else:
+                keywords = f"cluster_{i}"
+            if not keywords.strip():
+                keywords = f"cluster_{i}"
+            self.cluster_labels[str(i)] = keywords
+            self.cluster_themes[str(i)] = infer_theme_category(keywords)
+
     def train_embeddings(self, texts: List[str], n_clusters: int = 6):
         if not texts or len(texts) < n_clusters:
             raise ValueError(f"Texts list must contain at least {n_clusters} samples.")
+        self.vectorizer = None
         emb = embedding_generator.encode(texts)
         self.kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
-        self.kmeans.fit(emb)
-        if self.vectorizer is not None:
-            self._generate_cluster_labels(n_clusters)
-        else:
-            self.cluster_labels = {str(i): f"cluster_{i}" for i in range(n_clusters)}
-            self.cluster_themes = {str(i): infer_theme_category(f"cluster_{i}") for i in range(n_clusters)}
-        self.vectorizer = None
+        cluster_ids = self.kmeans.fit_predict(emb)
+        self._generate_embedding_cluster_labels(texts, cluster_ids.tolist(), n_clusters)
+
     def train_dbscan(self, texts: List[str], eps: float = 0.5, min_samples: int = 5):
         if not texts:
             raise ValueError("Texts list must not be empty.")
+        self.vectorizer = None
         emb = embedding_generator.encode(texts)
         self.kmeans = DBSCAN(eps=eps, min_samples=min_samples, metric='cosine')
-        self.kmeans.fit(emb)
-        labels = self.kmeans.labels_
-        unique_labels = [lbl for lbl in set(labels) if lbl != -1]
-        self.cluster_labels = {str(lbl): f"cluster_{lbl}" for lbl in unique_labels}
-        self.cluster_themes = {str(lbl): infer_theme_category(self.cluster_labels[str(lbl)]) for lbl in unique_labels}
-        self.vectorizer = None
+        cluster_ids = self.kmeans.fit_predict(emb)
+        unique_labels = sorted([lbl for lbl in set(cluster_ids) if lbl != -1])
+        self.cluster_labels = {}
+        self.cluster_themes = {}
+        for lbl in unique_labels:
+            c_texts = [texts[idx] for idx, cid in enumerate(cluster_ids) if cid == lbl]
+            if c_texts:
+                try:
+                    c_vec = TfidfVectorizer(max_features=50, stop_words="english", ngram_range=(1, 2))
+                    X = c_vec.fit_transform(c_texts)
+                    mean_scores = X.mean(axis=0).A1
+                    top_idx = mean_scores.argsort()[-3:][::-1]
+                    terms = c_vec.get_feature_names_out()
+                    keywords = " ".join([terms[idx] for idx in top_idx if idx < len(terms)])
+                except Exception:
+                    keywords = f"cluster_{lbl}"
+            else:
+                keywords = f"cluster_{lbl}"
+            if not keywords.strip():
+                keywords = f"cluster_{lbl}"
+            self.cluster_labels[str(lbl)] = keywords
+            self.cluster_themes[str(lbl)] = infer_theme_category(keywords)
 
     def predict_embeddings(self, text: str) -> dict:
         if not self.is_loaded():
