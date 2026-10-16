@@ -6,6 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.cluster import KMeans
 
 try:
+from src.clustering.embeddings import embedding_generator
     from src.preprocessing.cleaner import preprocess_for_ml
 except ImportError:
     def preprocess_for_ml(text: str) -> str:
@@ -82,6 +83,34 @@ class ComplaintClusterer:
             self.cluster_labels[str(i)] = keywords
             self.cluster_themes[str(i)] = infer_theme_category(keywords)
 
+    def train_embeddings(self, texts: List[str], n_clusters: int = 6):
+        if not texts or len(texts) < n_clusters:
+            raise ValueError(f"Texts list must contain at least {n_clusters} samples.")
+        emb = embedding_generator.encode(texts)
+        self.kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
+        self.kmeans.fit(emb)
+        self._generate_cluster_labels(n_clusters)
+        self.vectorizer = None
+
+    def predict_embeddings(self, text: str) -> dict:
+        if not self.is_loaded():
+            raise RuntimeError("Model is not loaded or trained.")
+        emb = embedding_generator.encode([text])
+        cluster_id = int(self.kmeans.predict(emb)[0])
+        cid_str = str(cluster_id)
+        return {"cluster_id": cluster_id, "cluster_label": self.cluster_labels.get(cid_str, cid_str), "complaint_category": self.cluster_themes.get(cid_str, self.cluster_labels.get(cid_str, cid_str))}
+
+    def predict_batch_embeddings(self, texts: List[str]) -> list:
+        if not self.is_loaded():
+            raise RuntimeError("Model is not loaded or trained.")
+        embs = embedding_generator.encode(texts)
+        cluster_ids = self.kmeans.predict(embs)
+        results = []
+        for cid in cluster_ids:
+            cid_str = str(int(cid))
+            results.append({"cluster_id": int(cid), "cluster_label": self.cluster_labels.get(cid_str, cid_str), "complaint_category": self.cluster_themes.get(cid_str, self.cluster_labels.get(cid_str, cid_str))})
+        return results
+
     def predict(self, text: str) -> dict:
         if not self.is_loaded():
             raise RuntimeError("Model is not loaded or trained.")
@@ -122,7 +151,8 @@ class ComplaintClusterer:
             raise RuntimeError("No model to save.")
         dir_to_save = model_dir or self.model_dir
         os.makedirs(dir_to_save, exist_ok=True)
-        joblib.dump(self.vectorizer, os.path.join(dir_to_save, "vectorizer.joblib"))
+        if self.vectorizer is not None:
+            joblib.dump(self.vectorizer, os.path.join(dir_to_save, "vectorizer.joblib"))
         joblib.dump(self.kmeans, os.path.join(dir_to_save, "kmeans.joblib"))
         with open(os.path.join(dir_to_save, "cluster_labels.json"), "w", encoding="utf-8") as f:
             json.dump(self.cluster_labels, f, indent=4)
@@ -148,4 +178,4 @@ class ComplaintClusterer:
             }
 
     def is_loaded(self) -> bool:
-        return self.vectorizer is not None and self.kmeans is not None
+        return self.kmeans is not None
