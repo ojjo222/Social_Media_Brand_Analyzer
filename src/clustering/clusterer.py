@@ -3,10 +3,10 @@ import json
 import joblib
 from typing import List, Dict, Optional
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, DBSCAN
 
 try:
-from src.clustering.embeddings import embedding_generator
+    from src.clustering.embeddings import embedding_generator
     from src.preprocessing.cleaner import preprocess_for_ml
 except ImportError:
     def preprocess_for_ml(text: str) -> str:
@@ -89,7 +89,22 @@ class ComplaintClusterer:
         emb = embedding_generator.encode(texts)
         self.kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
         self.kmeans.fit(emb)
-        self._generate_cluster_labels(n_clusters)
+        if self.vectorizer is not None:
+            self._generate_cluster_labels(n_clusters)
+        else:
+            self.cluster_labels = {str(i): f"cluster_{i}" for i in range(n_clusters)}
+            self.cluster_themes = {str(i): infer_theme_category(f"cluster_{i}") for i in range(n_clusters)}
+        self.vectorizer = None
+    def train_dbscan(self, texts: List[str], eps: float = 0.5, min_samples: int = 5):
+        if not texts:
+            raise ValueError("Texts list must not be empty.")
+        emb = embedding_generator.encode(texts)
+        self.kmeans = DBSCAN(eps=eps, min_samples=min_samples, metric='cosine')
+        self.kmeans.fit(emb)
+        labels = self.kmeans.labels_
+        unique_labels = [lbl for lbl in set(labels) if lbl != -1]
+        self.cluster_labels = {str(lbl): f"cluster_{lbl}" for lbl in unique_labels}
+        self.cluster_themes = {str(lbl): infer_theme_category(self.cluster_labels[str(lbl)]) for lbl in unique_labels}
         self.vectorizer = None
 
     def predict_embeddings(self, text: str) -> dict:
@@ -104,7 +119,10 @@ class ComplaintClusterer:
         if not self.is_loaded():
             raise RuntimeError("Model is not loaded or trained.")
         embs = embedding_generator.encode(texts)
-        cluster_ids = self.kmeans.predict(embs)
+        try:
+            cluster_ids = self.kmeans.predict(embs)
+        except AttributeError:
+            cluster_ids = self.kmeans.fit_predict(embs)
         results = []
         for cid in cluster_ids:
             cid_str = str(int(cid))
@@ -114,9 +132,19 @@ class ComplaintClusterer:
     def predict(self, text: str) -> dict:
         if not self.is_loaded():
             raise RuntimeError("Model is not loaded or trained.")
-        processed = preprocess_for_ml(text)
-        X = self.vectorizer.transform([processed])
-        cluster_id = int(self.kmeans.predict(X)[0])
+        if self.vectorizer is not None:
+            processed = preprocess_for_ml(text)
+            X = self.vectorizer.transform([processed])
+            try:
+                cluster_id = int(self.kmeans.predict(X)[0])
+            except AttributeError:
+                cluster_id = int(self.kmeans.fit_predict(X)[0])
+        else:
+            emb = embedding_generator.encode([text])
+            try:
+                cluster_id = int(self.kmeans.predict(emb)[0])
+            except AttributeError:
+                cluster_id = int(self.kmeans.fit_predict(emb)[0])
         cid_str = str(cluster_id)
         return {
             "cluster_id": cluster_id,
@@ -129,7 +157,10 @@ class ComplaintClusterer:
             raise RuntimeError("Model is not loaded or trained.")
         processed = [preprocess_for_ml(t) for t in texts]
         X = self.vectorizer.transform(processed)
-        cluster_ids = self.kmeans.predict(X)
+        try:
+            cluster_ids = self.kmeans.predict(X)
+        except AttributeError:
+            cluster_ids = self.kmeans.fit_predict(X)
         results = []
         for cid in cluster_ids:
             cid_str = str(int(cid))

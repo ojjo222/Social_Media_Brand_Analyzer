@@ -1,0 +1,801 @@
+platform,brand,comment,sentiment,cluster
+facebook,Amazon,Waiting for my scheduled delivery from Amazon.,neutral,Cluster_2
+twitter,PhonePe,fix your buggy and glitchy app @phonepe! buttons don't respond.,negative,Cluster_4
+twitter,PhonePe,"Very good experience with PhonePe. Easy to use, fast refunds when requested.",positive,Cluster_4
+reddit,Flipkart,@Flipkart please check your direct messages regarding my ticket.,neutral,Cluster_6
+reddit,Flipkart,"The automated bot on Flipkart is useless, can never speak to a human.",negative,Cluster_6
+reddit,Amazon,Highly recommend Amazon for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_0
+reddit,Amazon,"Very good experience with Amazon. Easy to use, fast refunds when requested.",positive,Cluster_2
+facebook,Swiggy,Loved the discount and lightning fast shipping on Swiggy today! 🎉,positive,Cluster_3
+twitter,Swiggy,The item I received from Swiggy is broken and counterfeit.,negative,Cluster_3
+facebook,Flipkart,Been stuck on hold for 45 mins with Flipkart phone support.,negative,Cluster_6
+instagram,Amazon,Critical bug in Amazon app: cart empties itself on checkout.,negative,Cluster_2
+instagram,Paytm,Super impressed with @Paytm! The driver was polite and order arrived early.,positive,Cluster_0
+facebook,Amazon,Everything arrived in perfect condition. Thank you @Amazon!,positive,Cluster_0
+facebook,Paytm,Received a spoiled item from Paytm. Horrible quality check.,negative,Cluster_5
+facebook,Flipkart,I think Flipkart changed their user interface today.,neutral,Cluster_6
+reddit,PhonePe,Loved the discount and lightning fast shipping on PhonePe today! 🎉,positive,Cluster_0
+reddit,PhonePe,waited 4 hours for my food delivery from @phonepe. disgraceful delay.,negative,Cluster_4
+reddit,Paytm,@paytm please check your direct messages regarding my ticket.,neutral,Cluster_5
+facebook,PhonePe,The PhonePe app keeps crashing constantly when I try to pay.,negative,Cluster_4
+facebook,Swiggy,Delivery driver from Swiggy was extremely rude and unhelpful.,negative,Cluster_3
+facebook,Paytm,"Can't log into my Paytm account, getting internal error 500.",negative,Cluster_5
+instagram,Paytm,I think Paytm changed their user interface today.,neutral,Cluster_5
+twitter,PhonePe,PhonePe website is completely broken on checkout page.,negative,Cluster_4
+instagram,Swiggy,Swiggy is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_3
+reddit,Paytm,Just had an amazing experience with @Paytm. Thanks for the great service! #happy,positive,Cluster_5
+reddit,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+instagram,Flipkart,Just comparing prices between Flipkart and other apps.,neutral,Cluster_6
+reddit,Zomato,Just downloaded the latest Zomato app update.,neutral,Cluster_1
+instagram,PhonePe,Loved the discount and lightning fast shipping on PhonePe today! 🎉,positive,Cluster_0
+twitter,Flipkart,notice: flipkart scheduled maintenance tonight at midnight.,neutral,Cluster_6
+reddit,Swiggy,Waiting for my scheduled delivery from Swiggy.,neutral,Cluster_3
+reddit,PhonePe,"Food from PhonePe was cold, stale, and smelled awful.",negative,Cluster_4
+facebook,Zomato,"Great delivery by @Zomato, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+twitter,Paytm,Paytm is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_5
+instagram,Flipkart,The packaging from @Flipkart was completely crushed and leaking.,negative,Cluster_0
+twitter,Flipkart,Kudos to the Flipkart team for always delivering top quality products.,positive,Cluster_6
+twitter,Paytm,Just had an amazing experience with @Paytm. Thanks for the great service! #happy,positive,Cluster_5
+reddit,Zomato,Thank you Zomato for the quick resolution and courteous team 😊,positive,Cluster_1
+reddit,Amazon,Using Amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+reddit,Paytm,"Great app, smooth UI and seamless checkout. Keep it up Paytm.",positive,Cluster_5
+twitter,Paytm,super impressed with @paytm! the driver was polite and order arrived early.,positive,Cluster_0
+instagram,PhonePe,Does anyone know how to change payment method on PhonePe?,neutral,Cluster_4
+twitter,PhonePe,"Best platform ever, @PhonePe you guys rock! Five stars! ✨",positive,Cluster_4
+twitter,PhonePe,@phonepe please check your direct messages regarding my ticket.,neutral,Cluster_4
+facebook,Swiggy,Waiting for my scheduled delivery from Swiggy.,neutral,Cluster_3
+facebook,Flipkart,Kudos to the Flipkart team for always delivering top quality products.,positive,Cluster_6
+twitter,Zomato,Just had an amazing experience with @Zomato. Thanks for the great service! #happy,positive,Cluster_1
+twitter,Swiggy,"Best platform ever, @Swiggy you guys rock! Five stars! ✨",positive,Cluster_3
+facebook,Paytm,Critical bug in Paytm app: cart empties itself on checkout.,negative,Cluster_5
+twitter,Paytm,Notice: Paytm scheduled maintenance tonight at midnight.,neutral,Cluster_5
+instagram,PhonePe,Using PhonePe makes my daily routine so much easier and pleasant.,positive,Cluster_4
+facebook,Paytm,Delicious food and timely delivery by Paytm. Will order again!,positive,Cluster_0
+reddit,Amazon,amazon customer support is totally unresponsive and useless.,negative,Cluster_2
+instagram,Swiggy,Just comparing prices between Swiggy and other apps.,neutral,Cluster_3
+twitter,Amazon,Notice: Amazon scheduled maintenance tonight at midnight.,neutral,Cluster_2
+instagram,Swiggy,"Great delivery by @Swiggy, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+facebook,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0
+instagram,Zomato,Terrible quality from Zomato. Defective product right out of the box.,negative,Cluster_1
+instagram,Amazon,Where is my money @Amazon? Refund not processed after return #scam,negative,Cluster_2
+instagram,Paytm,Been stuck on hold for 45 mins with Paytm phone support.,negative,Cluster_5
+instagram,Zomato,"Food from Zomato was cold, stale, and smelled awful.",negative,Cluster_1
+twitter,Flipkart,Flipkart arbitrarily rejected my valid return and refund claim.,negative,Cluster_6
+facebook,Swiggy,Delicious food and timely delivery by Swiggy. Will order again!,positive,Cluster_3
+twitter,Amazon,Notice: Amazon scheduled maintenance tonight at midnight.,neutral,Cluster_2
+twitter,Swiggy,"Late delivery again, Swiggy is so inconsistent and delayed.",negative,Cluster_3
+twitter,PhonePe,Everything arrived in perfect condition. Thank you @PhonePe!,positive,Cluster_0
+twitter,Zomato,Delicious food and timely delivery by Zomato. Will order again!,positive,Cluster_1
+instagram,Paytm,why is it impossible to get help from a representative at paytm?,negative,Cluster_5
+twitter,Swiggy,Five stars for Swiggy! Loved the fast response and on-time order.,positive,Cluster_3
+facebook,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+instagram,Paytm,App freezes every time I open the search tab on Paytm.,negative,Cluster_5
+instagram,Swiggy,"Great delivery by @Swiggy, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+reddit,Zomato,Thank you Zomato for the quick resolution and courteous team 😊,positive,Cluster_1
+instagram,Paytm,Still waiting for my pending refund from Paytm after 3 weeks.,negative,Cluster_5
+instagram,Amazon,How long does standard delivery take on Amazon?,neutral,Cluster_2
+instagram,Amazon,Seamless payment experience on Amazon. Really happy with the new update.,positive,Cluster_2
+instagram,Paytm,Just comparing prices between Paytm and other apps.,neutral,Cluster_5
+twitter,Paytm,Highly recommend Paytm for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_5
+reddit,Paytm,"Late delivery again, Paytm is so inconsistent and delayed.",negative,Cluster_5
+facebook,Zomato,Has anyone tried the new premium subscription on Zomato?,neutral,Cluster_1
+reddit,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4
+instagram,Swiggy,Wondering if Swiggy delivers to rural postal codes.,neutral,Cluster_3
+instagram,Paytm,What are good alternative platforms to Paytm?,neutral,Cluster_5
+facebook,Swiggy,"very good experience with swiggy. easy to use, fast refunds when requested.",positive,Cluster_3
+instagram,Flipkart,Just had an amazing experience with @Flipkart. Thanks for the great service! #happy,positive,Cluster_6
+instagram,Amazon,Wondering if Amazon delivers to rural postal codes.,neutral,Cluster_2
+twitter,Paytm,Wondering if Paytm delivers to rural postal codes.,neutral,Cluster_5
+facebook,Swiggy,Has anyone tried the new premium subscription on Swiggy?,neutral,Cluster_3
+instagram,PhonePe,Hidden fees and unauthorized charges on PhonePe? Disgusting practice.,negative,Cluster_4
+reddit,Paytm,Absolutely fantastic service and prompt support from Paytm today.,positive,Cluster_5
+twitter,PhonePe,Overcharged by PhonePe on checkout and support refuses to adjust the bill.,negative,Cluster_4
+reddit,Flipkart,i think flipkart changed their user interface today.,neutral,Cluster_6
+facebook,Swiggy,Everything arrived in perfect condition. Thank you @Swiggy!,positive,Cluster_0
+reddit,Amazon,Does anyone know how to change payment method on Amazon?,neutral,Cluster_2
+twitter,Flipkart,Still waiting for my pending refund from Flipkart after 3 weeks.,negative,Cluster_6
+instagram,Amazon,"Best platform ever, @Amazon you guys rock! Five stars! ✨",positive,Cluster_2
+reddit,Flipkart,Just comparing prices between Flipkart and other apps.,neutral,Cluster_6
+twitter,Paytm,Has anyone tried the new premium subscription on Paytm?,neutral,Cluster_5
+facebook,Amazon,Loved the discount and lightning fast shipping on Amazon today! 🎉,positive,Cluster_0
+instagram,Paytm,Just had an amazing experience with @Paytm. Thanks for the great service! #happy,positive,Cluster_5
+facebook,Paytm,Pleasantly surprised by how quickly Paytm handled my inquiry.,positive,Cluster_5
+facebook,Amazon,Saw an advertisement for Amazon on YouTube yesterday.,neutral,Cluster_2
+twitter,Swiggy,Wondering if Swiggy delivers to rural postal codes.,neutral,Cluster_3
+reddit,Swiggy,Just comparing prices between Swiggy and other apps.,neutral,Cluster_3
+facebook,Paytm,@Paytm please check your direct messages regarding my ticket.,neutral,Cluster_5
+facebook,Zomato,Is Zomato servers down for anyone else right now?,neutral,Cluster_1
+instagram,Zomato,Kudos to the Zomato team for always delivering top quality products.,positive,Cluster_1
+facebook,Zomato,Absolutely fantastic service and prompt support from Zomato today.,positive,Cluster_1
+facebook,Swiggy,"very good experience with swiggy. easy to use, fast refunds when requested.",positive,Cluster_3
+reddit,Paytm,Seamless payment experience on Paytm. Really happy with the new update.,positive,Cluster_5
+reddit,Paytm,Can you pay with crypto or UPI credit on Paytm?,neutral,Cluster_5
+instagram,Paytm,Five stars for Paytm! Loved the fast response and on-time order.,positive,Cluster_5
+reddit,Swiggy,Just comparing prices between Swiggy and other apps.,neutral,Cluster_3
+facebook,Swiggy,Waiting for my scheduled delivery from Swiggy.,neutral,Cluster_3
+instagram,PhonePe,Thank you PhonePe for the quick resolution and courteous team 😊,positive,Cluster_4
+facebook,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4
+instagram,Amazon,using amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+reddit,Flipkart,Highly recommend Flipkart for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_6
+facebook,Zomato,I think Zomato changed their user interface today.,neutral,Cluster_1
+twitter,Amazon,why did my subscription for amazon auto-renew after i cancelled?,negative,Cluster_2
+facebook,Flipkart,Just had an amazing experience with @Flipkart. Thanks for the great service! #happy,positive,Cluster_6
+instagram,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4
+facebook,Zomato,app freezes every time i open the search tab on zomato.,negative,Cluster_1
+instagram,Flipkart,Using Flipkart makes my daily routine so much easier and pleasant.,positive,Cluster_6
+instagram,Amazon,Love using Amazon! Always reliable and fast. 💯,positive,Cluster_2
+instagram,Amazon,What are good alternative platforms to Amazon?,neutral,Cluster_2
+instagram,Paytm,Notice: Paytm scheduled maintenance tonight at midnight.,neutral,Cluster_5
+reddit,Flipkart,Just downloaded the latest Flipkart app update.,neutral,Cluster_6
+twitter,Flipkart,Never got my delivery from @Flipkart. Worst service ever.,negative,Cluster_6
+reddit,Swiggy,Tracking status says delivered but I received nothing from Swiggy.,negative,Cluster_3
+reddit,PhonePe,PhonePe charged my account twice for the exact same order.,negative,Cluster_4
+facebook,PhonePe,My order from PhonePe is 3 days late! 😡 #fail #terrible,negative,Cluster_4
+twitter,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4
+reddit,PhonePe,Using PhonePe makes my daily routine so much easier and pleasant.,positive,Cluster_4
+twitter,Zomato,Can you pay with crypto or UPI credit on Zomato?,neutral,Cluster_1
+facebook,Flipkart,Payment failed but the money was deducted from my bank by Flipkart.,negative,Cluster_6
+twitter,PhonePe,can you pay with crypto or upi credit on phonepe?,neutral,Cluster_4
+twitter,Zomato,"Very good experience with Zomato. Easy to use, fast refunds when requested.",positive,Cluster_1
+reddit,PhonePe,How long does standard delivery take on PhonePe?,neutral,Cluster_4
+facebook,Flipkart,Kudos to the Flipkart team for always delivering top quality products.,positive,Cluster_6
+instagram,Paytm,Absolutely fantastic service and prompt support from Paytm today.,positive,Cluster_5
+twitter,Flipkart,Can you pay with crypto or UPI credit on Flipkart?,neutral,Cluster_6
+facebook,Paytm,Delicious food and timely delivery by Paytm. Will order again!,positive,Cluster_0
+instagram,Zomato,Can you pay with crypto or UPI credit on Zomato?,neutral,Cluster_1
+instagram,PhonePe,Delivery driver from PhonePe was extremely rude and unhelpful.,negative,Cluster_4
+facebook,PhonePe,Love using PhonePe! Always reliable and fast. 💯,positive,Cluster_4
+reddit,Paytm,Wondering if Paytm delivers to rural postal codes.,neutral,Cluster_5
+reddit,PhonePe,Kudos to the PhonePe team for always delivering top quality products.,positive,Cluster_4
+reddit,Flipkart,"food from flipkart was cold, stale, and smelled awful.",negative,Cluster_6
+reddit,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1
+facebook,PhonePe,Highly recommend PhonePe for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_4
+twitter,Zomato,Just comparing prices between Zomato and other apps.,neutral,Cluster_1
+reddit,Amazon,"The automated bot on Amazon is useless, can never speak to a human.",negative,Cluster_2
+reddit,Swiggy,Super impressed with @Swiggy! The driver was polite and order arrived early.,positive,Cluster_0
+twitter,PhonePe,@phonepe please check your direct messages regarding my ticket.,neutral,Cluster_4
+twitter,Flipkart,Flipkart charged my account twice for the exact same order.,negative,Cluster_6
+facebook,Flipkart,love using flipkart! always reliable and fast. 💯,positive,Cluster_6
+reddit,Swiggy,"Great app, smooth UI and seamless checkout. Keep it up Swiggy.",positive,Cluster_3
+instagram,Flipkart,The item I received from Flipkart is broken and counterfeit.,negative,Cluster_6
+instagram,Zomato,"Food from Zomato was cold, stale, and smelled awful.",negative,Cluster_1
+facebook,Zomato,I demand my money back Zomato! Fraudulent refusal to refund.,negative,Cluster_1
+facebook,PhonePe,"Great delivery by @PhonePe, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+reddit,Zomato,Highly recommend Zomato for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_1
+facebook,Paytm,Does anyone know how to change payment method on Paytm?,neutral,Cluster_5
+twitter,PhonePe,Pleasantly surprised by how quickly PhonePe handled my inquiry.,positive,Cluster_4
+facebook,Flipkart,Received a spoiled item from Flipkart. Horrible quality check.,negative,Cluster_6
+instagram,Paytm,Still waiting for my pending refund from Paytm after 3 weeks.,negative,Cluster_5
+twitter,Zomato,Loved the discount and lightning fast shipping on Zomato today! 🎉,positive,Cluster_1
+reddit,Swiggy,Terrible quality from Swiggy. Defective product right out of the box.,negative,Cluster_3
+facebook,PhonePe,Not what I expected from PhonePe. Looks fake and cheap.,negative,Cluster_4
+facebook,Swiggy,Tracking status says delivered but I received nothing from Swiggy.,negative,Cluster_3
+reddit,Paytm,paytm website is completely broken on checkout page.,negative,Cluster_5
+reddit,Amazon,Outstanding customer support from Amazon. Solved my issue within 5 minutes!,positive,Cluster_2
+facebook,Paytm,Just downloaded the latest Paytm app update.,neutral,Cluster_5
+facebook,PhonePe,Notice: PhonePe scheduled maintenance tonight at midnight.,neutral,Cluster_4
+facebook,Zomato,How long does standard delivery take on Zomato?,neutral,Cluster_1
+reddit,Swiggy,My order from Swiggy is 3 days late! 😡 #fail #terrible,negative,Cluster_3
+reddit,Swiggy,Loved the discount and lightning fast shipping on Swiggy today! 🎉,positive,Cluster_3
+reddit,Amazon,@Amazon please check your direct messages regarding my ticket.,neutral,Cluster_2
+instagram,Swiggy,Kudos to the Swiggy team for always delivering top quality products.,positive,Cluster_3
+facebook,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+instagram,Swiggy,Highly recommend Swiggy for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_3
+twitter,Flipkart,Flipkart is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_6
+instagram,PhonePe,Just had an amazing experience with @PhonePe. Thanks for the great service! #happy,positive,Cluster_4
+facebook,Flipkart,Has anyone tried the new premium subscription on Flipkart?,neutral,Cluster_6
+instagram,Flipkart,"Very good experience with Flipkart. Easy to use, fast refunds when requested.",positive,Cluster_6
+instagram,Amazon,Delivery driver from Amazon was extremely rude and unhelpful.,negative,Cluster_2
+facebook,Flipkart,Flipkart is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_6
+reddit,Amazon,Kudos to the Amazon team for always delivering top quality products.,positive,Cluster_2
+instagram,PhonePe,pleasantly surprised by how quickly phonepe handled my inquiry.,positive,Cluster_4
+facebook,PhonePe,Payment failed but the money was deducted from my bank by PhonePe.,negative,Cluster_4
+reddit,Zomato,How long does standard delivery take on Zomato?,neutral,Cluster_1
+facebook,Amazon,@Amazon please check your direct messages regarding my ticket.,neutral,Cluster_2
+facebook,PhonePe,Trying out PhonePe for the first time this week.,neutral,Cluster_4
+reddit,PhonePe,Just downloaded the latest PhonePe app update.,neutral,Cluster_4
+instagram,PhonePe,Why did my subscription for PhonePe auto-renew after I cancelled?,negative,Cluster_4
+reddit,Zomato,Still waiting for my pending refund from Zomato after 3 weeks.,negative,Cluster_1
+reddit,Flipkart,just had an amazing experience with @flipkart. thanks for the great service! #happy,positive,Cluster_6
+facebook,Paytm,Has anyone tried the new premium subscription on Paytm?,neutral,Cluster_5
+facebook,PhonePe,Still waiting for my pending refund from PhonePe after 3 weeks.,negative,Cluster_4
+twitter,Zomato,Worst customer service experience ever with @Zomato. Rude agents.,negative,Cluster_1
+reddit,Flipkart,Waiting for my scheduled delivery from Flipkart.,neutral,Cluster_6
+facebook,Amazon,@Amazon please check your direct messages regarding my ticket.,neutral,Cluster_2
+twitter,PhonePe,@PhonePe please check your direct messages regarding my ticket.,neutral,Cluster_4
+facebook,Flipkart,Five stars for Flipkart! Loved the fast response and on-time order.,positive,Cluster_6
+reddit,Flipkart,Just had an amazing experience with @Flipkart. Thanks for the great service! #happy,positive,Cluster_6
+instagram,Paytm,Everything arrived in perfect condition. Thank you @Paytm!,positive,Cluster_0
+facebook,Paytm,Loved the discount and lightning fast shipping on Paytm today! 🎉,positive,Cluster_0
+twitter,PhonePe,Just had an amazing experience with @PhonePe. Thanks for the great service! #happy,positive,Cluster_4
+reddit,Zomato,What are good alternative platforms to Zomato?,neutral,Cluster_1
+facebook,Amazon,Loved the discount and lightning fast shipping on Amazon today! 🎉,positive,Cluster_0
+twitter,Zomato,Love using Zomato! Always reliable and fast. 💯,positive,Cluster_1
+facebook,Swiggy,swiggy customer support is totally unresponsive and useless.,negative,Cluster_3
+instagram,Zomato,Delicious food and timely delivery by Zomato. Will order again!,positive,Cluster_1
+twitter,Zomato,"great delivery by @zomato, loved it! super fast and reliable. #satisfied",positive,Cluster_0
+reddit,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4
+facebook,Amazon,Absolutely fantastic service and prompt support from Amazon today.,positive,Cluster_2
+twitter,Swiggy,Swiggy charged my account twice for the exact same order.,negative,Cluster_3
+facebook,Zomato,Just comparing prices between Zomato and other apps.,neutral,Cluster_1
+twitter,PhonePe,Delicious food and timely delivery by PhonePe. Will order again!,positive,Cluster_0
+instagram,Paytm,"Best platform ever, @Paytm you guys rock! Five stars! ✨",positive,Cluster_5
+twitter,Flipkart,Absolutely fantastic service and prompt support from Flipkart today.,positive,Cluster_6
+reddit,PhonePe,How long does standard delivery take on PhonePe?,neutral,Cluster_4
+facebook,PhonePe,Wondering if PhonePe delivers to rural postal codes.,neutral,Cluster_4
+reddit,Zomato,How long does standard delivery take on Zomato?,neutral,Cluster_1
+twitter,PhonePe,Five stars for PhonePe!!1! Loved the fast response and on-time order.,positive,Cluster_4
+twitter,Swiggy,Just had an amazing experience with @Swiggy. Thanks for the great service! #happy,positive,Cluster_3
+twitter,PhonePe,Can you pay with crypto or UPI credit on PhonePe?,neutral,Cluster_4
+reddit,PhonePe,Delicious food and timely delivery by PhonePe. Will order again!,positive,Cluster_0
+twitter,Swiggy,Delicious food and timely delivery by Swiggy. Will order again!!1!,positive,Cluster_3
+instagram,Zomato,"The automated bot on Zomato is useless, can never speak to a human.",negative,Cluster_1
+twitter,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5
+facebook,Zomato,What are good alternative platforms to Zomato?,neutral,Cluster_1
+facebook,Flipkart,"Late delivery again, Flipkart is so inconsistent and delayed.",negative,Cluster_6
+reddit,Paytm,"Great app, smooth UI and seamless checkout. Keep it up Paytm.",positive,Cluster_5
+facebook,Zomato,"Great app, smooth UI and seamless checkout. Keep it up Zomato.",positive,Cluster_1
+twitter,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5
+instagram,Flipkart,Super impressed with @Flipkart! The driver was polite and order arrived early.,positive,Cluster_0
+instagram,Flipkart,Just had an amazing experience with @Flipkart. Thanks for the great service! #happy,positive,Cluster_6
+twitter,PhonePe,How long does standard delivery take on PhonePe?,neutral,Cluster_4
+instagram,Zomato,Absolutely fantastic service and prompt support from Zomato today.,positive,Cluster_1
+reddit,Flipkart,Does anyone know how to change payment method on Flipkart?,neutral,Cluster_6
+facebook,Zomato,Kudos to the Zomato team for always delivering top quality products.,positive,Cluster_1
+instagram,Zomato,Support representative closed my ticket without resolving anything on Zomato.,negative,Cluster_1
+reddit,Swiggy,Saw an advertisement for Swiggy on YouTube yesterday.,neutral,Cluster_3
+instagram,PhonePe,PhonePe customer support is totally unresponsive and useless.,negative,Cluster_4
+twitter,Amazon,what are good alternative platforms to amazon?,neutral,Cluster_2
+instagram,PhonePe,Wondering if PhonePe delivers to rural postal codes.,neutral,Cluster_4
+facebook,Zomato,Love using Zomato! Always reliable and fast. 💯,positive,Cluster_1
+twitter,Zomato,Outstanding customer support from Zomato. Solved my issue within 5 minutes!,positive,Cluster_1
+facebook,Paytm,"Great app, smooth UI and seamless checkout. Keep it up Paytm.",positive,Cluster_5
+instagram,Paytm,Refund marked processed but not reflecting in my bank account from Paytm.,negative,Cluster_5
+instagram,Swiggy,"Great app, smooth UI and seamless checkout. Keep it up Swiggy.",positive,Cluster_3
+facebook,Amazon,Waiting for my scheduled delivery from Amazon.,neutral,Cluster_2
+reddit,PhonePe,Just downloaded the latest PhonePe app update.,neutral,Cluster_4
+instagram,Amazon,Just comparing prices between Amazon and other apps.,neutral,Cluster_2
+reddit,Flipkart,I think Flipkart changed their user interface today.,neutral,Cluster_6
+twitter,Amazon,why did my subscription for amazon auto-renew after i cancelled?,negative,Cluster_2
+twitter,Paytm,Outstanding customer support from Paytm. Solved my issue within 5 minutes!,positive,Cluster_5
+twitter,Paytm,Critical bug in Paytm app: cart empties itself on checkout.,negative,Cluster_5
+instagram,Swiggy,Kudos to the Swiggy team for always delivering top quality products.,positive,Cluster_3
+twitter,Flipkart,kudos to the flipkart team for always delivering top quality products.,positive,Cluster_6
+facebook,Amazon,Worst customer service experience ever with @Amazon. Rude agents.,negative,Cluster_2
+instagram,Amazon,What are good alternative platforms to Amazon?,neutral,Cluster_2
+facebook,Swiggy,Waited 4 hours for my food delivery from @Swiggy. Disgraceful delay.,negative,Cluster_3
+facebook,Zomato,"Food from Zomato was cold, stale, and smelled awful.",negative,Cluster_1
+twitter,Swiggy,refund marked processed but not reflecting in my bank account from swiggy.,negative,Cluster_3
+facebook,PhonePe,phonepe customer support is totally unresponsive and useless.,negative,Cluster_4
+reddit,PhonePe,Absolutely fantastic service and prompt support from PhonePe today.,positive,Cluster_4
+reddit,Swiggy,Using Swiggy makes my daily routine so much easier and pleasant.,positive,Cluster_3
+reddit,Paytm,Outstanding customer support from Paytm. Solved my issue within 5 minutes!,positive,Cluster_5
+instagram,Amazon,Pleasantly surprised by how quickly Amazon handled my inquiry.,positive,Cluster_2
+facebook,Flipkart,Outstanding customer support from Flipkart. Solved my issue within 5 minutes!,positive,Cluster_6
+reddit,Paytm,Is Paytm servers down for anyone else right now?,neutral,Cluster_5
+facebook,PhonePe,Trying out PhonePe for the first time this week.,neutral,Cluster_4
+instagram,Amazon,Overcharged by Amazon on checkout and support refuses to adjust the bill.,negative,Cluster_2
+reddit,Swiggy,Thank you Swiggy for the quick resolution and courteous team 😊,positive,Cluster_3
+instagram,Zomato,Never got my delivery from @Zomato. Worst service ever.,negative,Cluster_1
+twitter,Zomato,Where is my money @Zomato? Refund not processed after return #scam,negative,Cluster_1
+facebook,Swiggy,Wondering if Swiggy delivers to rural postal codes.,neutral,Cluster_3
+facebook,Flipkart,"Can't log into my Flipkart account, getting internal error 500.",negative,Cluster_6
+twitter,Zomato,Outstanding customer support from Zomato. Solved my issue within 5 minutes!,positive,Cluster_1
+instagram,PhonePe,the phonepe app keeps crashing constantly when i try to pay.,negative,Cluster_4
+reddit,Zomato,overcharged by zomato on checkout and support refuses to adjust the bill.,negative,Cluster_1
+reddit,Zomato,How long does standard delivery take on Zomato?,neutral,Cluster_1
+instagram,PhonePe,"Food from PhonePe was cold, stale, and smelled awful.",negative,Cluster_4
+instagram,PhonePe,Been stuck on hold for 45 mins with PhonePe phone support.,negative,Cluster_4
+facebook,PhonePe,Just had an amazing experience with @PhonePe. Thanks for the great service! #happy,positive,Cluster_4
+facebook,Flipkart,@Flipkart please check your direct messages regarding my ticket.,neutral,Cluster_6
+instagram,PhonePe,Absolutely fantastic service and prompt support from PhonePe today.,positive,Cluster_4
+twitter,PhonePe,Wondering if PhonePe delivers to rural postal codes.,neutral,Cluster_4
+facebook,PhonePe,PhonePe arbitrarily rejected my valid return and refund claim.,negative,Cluster_4
+facebook,Zomato,How long does standard delivery take on Zomato?,neutral,Cluster_1
+reddit,Paytm,why is it impossible to get help from a representative at paytm?,negative,Cluster_5
+reddit,Zomato,Waiting for my scheduled delivery from Zomato.,neutral,Cluster_1
+facebook,Swiggy,Hidden fees and unauthorized charges on Swiggy? Disgusting practice.,negative,Cluster_3
+reddit,Flipkart,Highly recommend Flipkart for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_6
+reddit,Swiggy,Pleasantly surprised by how quickly Swiggy handled my inquiry.,positive,Cluster_3
+facebook,Swiggy,Terrible quality from Swiggy. Defective product right out of the box.,negative,Cluster_3
+reddit,Swiggy,does anyone know how to change payment method on swiggy?,neutral,Cluster_3
+instagram,Flipkart,@Flipkart please check your direct messages regarding my ticket.,neutral,Cluster_6
+reddit,Paytm,What are good alternative platforms to Paytm?,neutral,Cluster_5
+facebook,Swiggy,Has anyone tried the new premium subscription on Swiggy?,neutral,Cluster_3
+instagram,PhonePe,Outstanding customer support from PhonePe. Solved my issue within 5 minutes!,positive,Cluster_4
+facebook,PhonePe,Wondering if PhonePe delivers to rural postal codes.,neutral,Cluster_4
+reddit,Amazon,Outstanding customer support from Amazon. Solved my issue within 5 minutes!,positive,Cluster_2
+instagram,Flipkart,App freezes every time I open the search tab on Flipkart.,negative,Cluster_6
+facebook,Paytm,Seamless payment experience on Paytm. Really happy with the new update.,positive,Cluster_5
+facebook,Flipkart,Flipkart website is completely broken on checkout page.,negative,Cluster_6
+facebook,Swiggy,App freezes every time I open the search tab on Swiggy.,negative,Cluster_3
+facebook,Amazon,Super impressed with @Amazon! The driver was polite and order arrived early.,positive,Cluster_0
+twitter,Paytm,@Paytm please check your direct messages regarding my ticket.,neutral,Cluster_5
+instagram,PhonePe,Still waiting for my pending refund from PhonePe after 3 weeks.,negative,Cluster_4
+reddit,PhonePe,I think PhonePe changed their user interface today.,neutral,Cluster_4
+twitter,Paytm,waiting for my scheduled delivery from paytm.,neutral,Cluster_5
+instagram,Paytm,"Great delivery by @Paytm, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+twitter,Paytm,Just comparing prices between Paytm and other apps.,neutral,Cluster_5
+reddit,Paytm,Delicious food and timely delivery by Paytm. Will order again!,positive,Cluster_0
+facebook,PhonePe,Saw an advertisement for PhonePe on YouTube yesterday.,neutral,Cluster_4
+facebook,Paytm,Fix your buggy and glitchy app @Paytm! Buttons don't respond.,negative,Cluster_5
+facebook,Flipkart,Has anyone tried the new premium subscription on Flipkart?,neutral,Cluster_6
+reddit,Swiggy,Worst customer service experience ever with @Swiggy. Rude agents.,negative,Cluster_3
+reddit,Amazon,Everything arrived in perfect condition. Thank you @Amazon!,positive,Cluster_0
+twitter,Swiggy,support representative closed my ticket without resolving anything on swiggy.,negative,Cluster_3
+reddit,Paytm,Terrible quality from Paytm. Defective product right out of the box.,negative,Cluster_5
+instagram,Swiggy,Just downloaded the latest Swiggy app update.,neutral,Cluster_3
+instagram,Paytm,"best platform ever, @paytm you guys rock! five stars! ✨",positive,Cluster_5
+instagram,Amazon,"Late delivery again, Amazon is so inconsistent and delayed.",negative,Cluster_2
+reddit,Zomato,Zomato arbitrarily rejected my valid return and refund claim.,negative,Cluster_1
+twitter,Amazon,Loved the discount and lightning fast shipping on Amazon today! 🎉,positive,Cluster_0
+instagram,Amazon,Hidden fees and unauthorized charges on Amazon? Disgusting practice.,negative,Cluster_2
+instagram,Zomato,Where is my money @Zomato? Refund not processed after return #scam,negative,Cluster_1
+facebook,Amazon,What are good alternative platforms to Amazon?,neutral,Cluster_2
+reddit,Flipkart,What are good alternative platforms to Flipkart?,neutral,Cluster_6
+facebook,Zomato,absolutely fantastic service and prompt support from zomato today.,positive,Cluster_1
+instagram,Paytm,Absolutely fantastic service and prompt support from Paytm today.,positive,Cluster_5
+facebook,Zomato,Just downloaded the latest Zomato app update.,neutral,Cluster_1
+facebook,Zomato,The item I received from Zomato is broken and counterfeit.,negative,Cluster_1
+facebook,Swiggy,Critical bug in Swiggy app: cart empties itself on checkout.,negative,Cluster_3
+twitter,Flipkart,Highly recommend Flipkart for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_6
+facebook,Paytm,Still waiting for my pending refund from Paytm after 3 weeks.,negative,Cluster_5
+instagram,Flipkart,"Great app, smooth UI and seamless checkout. Keep it up Flipkart.",positive,Cluster_6
+reddit,Swiggy,I demand my money back Swiggy! Fraudulent refusal to refund.,negative,Cluster_3
+instagram,Flipkart,I demand my money back Flipkart! Fraudulent refusal to refund.,negative,Cluster_6
+facebook,Paytm,Just downloaded the latest Paytm app update.,neutral,Cluster_5
+instagram,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4
+instagram,Amazon,Just comparing prices between Amazon and other apps.,neutral,Cluster_2
+reddit,Amazon,I think Amazon changed their user interface today.,neutral,Cluster_2
+facebook,Zomato,Love using Zomato! Always reliable and fast. 💯,positive,Cluster_1
+twitter,PhonePe,Tracking status says delivered but I received nothing from PhonePe.,negative,Cluster_4
+reddit,Amazon,Delivery driver from Amazon was extremely rude and unhelpful.,negative,Cluster_2
+reddit,Paytm,Why is it impossible to get help from a representative at Paytm?,negative,Cluster_5
+instagram,Amazon,Outstanding customer support from Amazon. Solved my issue within 5 minutes!,positive,Cluster_2
+instagram,Flipkart,Love using Flipkart! Always reliable and fast. 💯,positive,Cluster_6
+reddit,Paytm,Saw an advertisement for Paytm on YouTube yesterday.,neutral,Cluster_5
+facebook,Flipkart,Waiting for my scheduled delivery from Flipkart.,neutral,Cluster_6
+reddit,Paytm,Pleasantly surprised by how quickly Paytm handled my inquiry.,positive,Cluster_5
+twitter,Flipkart,Highly recommend Flipkart for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_6
+instagram,Amazon,Still waiting for my pending refund from Amazon after 3 weeks.,negative,Cluster_2
+instagram,Amazon,Delicious food and timely delivery by Amazon. Will order again!,positive,Cluster_0
+facebook,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4
+instagram,Flipkart,"Great delivery by @Flipkart, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+instagram,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5
+reddit,Paytm,Paytm website is completely broken on checkout page.,negative,Cluster_5
+reddit,Flipkart,"Best platform ever, @Flipkart you guys rock! Five stars! ✨",positive,Cluster_6
+twitter,Zomato,Fix your buggy and glitchy app @Zomato! Buttons don't respond.,negative,Cluster_1
+facebook,Flipkart,Thank you Flipkart for the quick resolution and courteous team 😊,positive,Cluster_6
+twitter,Swiggy,Saw an advertisement for Swiggy on YouTube yesterday.,neutral,Cluster_3
+twitter,Paytm,Just had an amazing experience with @Paytm. Thanks for the great service! #happy,positive,Cluster_5
+instagram,PhonePe,Hidden fees and unauthorized charges on PhonePe? Disgusting practice.,negative,Cluster_4
+instagram,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0
+instagram,Flipkart,Trying out Flipkart for the first time this week.,neutral,Cluster_6
+reddit,Zomato,Critical bug in Zomato app: cart empties itself on checkout.,negative,Cluster_1
+reddit,Zomato,Just downloaded the latest Zomato app update.,neutral,Cluster_1
+instagram,Swiggy,"The automated bot on Swiggy is useless, can never speak to a human.",negative,Cluster_3
+twitter,Flipkart,Using Flipkart makes my daily routine so much easier and pleasant.,positive,Cluster_6
+instagram,Swiggy,Not what I expected from Swiggy. Looks fake and cheap.,negative,Cluster_3
+facebook,PhonePe,Using PhonePe makes my daily routine so much easier and pleasant.,positive,Cluster_4
+reddit,Paytm,Hidden fees and unauthorized charges on Paytm? Disgusting practice.,negative,Cluster_5
+reddit,PhonePe,Absolutely fantastic service and prompt support from PhonePe today.,positive,Cluster_4
+twitter,Amazon,Wondering if Amazon delivers to rural postal codes.,neutral,Cluster_2
+reddit,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0
+reddit,PhonePe,outstanding customer support from phonepe. solved my issue within 5 minutes!,positive,Cluster_4
+reddit,Zomato,My order from Zomato is 3 days late! 😡 #fail #terrible,negative,Cluster_1
+facebook,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+reddit,Paytm,The item I received from Paytm is broken and counterfeit.,negative,Cluster_5
+facebook,PhonePe,Outstanding customer support from PhonePe. Solved my issue within 5 minutes!,positive,Cluster_4
+reddit,Zomato,Loved the discount and lightning fast shipping on Zomato today! 🎉,positive,Cluster_1
+twitter,Amazon,Just had an amazing experience with @Amazon. Thanks for the great service! #happy,positive,Cluster_2
+twitter,Paytm,Just comparing prices between Paytm and other apps.,neutral,Cluster_5
+twitter,Swiggy,Notice: Swiggy scheduled maintenance tonight at midnight.,neutral,Cluster_3
+reddit,Paytm,using paytm makes my daily routine so much easier and pleasant.,positive,Cluster_5
+twitter,PhonePe,not what i expected from phonepe. looks fake and cheap.,negative,Cluster_4
+reddit,Paytm,Just had an amazing experience with @Paytm. Thanks for the great service! #happy,positive,Cluster_5
+facebook,Zomato,Trying out Zomato for the first time this week.,neutral,Cluster_1
+twitter,Paytm,Critical bug in Paytm app: cart empties itself on checkout.,negative,Cluster_5
+facebook,Amazon,@Amazon please check your direct messages regarding my ticket.,neutral,Cluster_2
+twitter,Swiggy,Using Swiggy makes my daily routine so much easier and pleasant.,positive,Cluster_3
+reddit,PhonePe,"Great delivery by @PhonePe, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+facebook,PhonePe,"Best platform ever, @PhonePe you guys rock! Five stars! ✨",positive,Cluster_4
+instagram,Paytm,Everything arrived in perfect condition. Thank you @Paytm!,positive,Cluster_0
+reddit,Swiggy,Outstanding customer support from Swiggy. Solved my issue within 5 minutes!,positive,Cluster_3
+reddit,Zomato,"Very good experience with Zomato. Easy to use, fast refunds when requested.",positive,Cluster_1
+twitter,Swiggy,Pleasantly surprised by how quickly Swiggy handled my inquiry.,positive,Cluster_3
+reddit,Swiggy,Everything arrived in perfect condition. Thank you @Swiggy!,positive,Cluster_0
+instagram,Flipkart,How long does standard delivery take on Flipkart?,neutral,Cluster_6
+instagram,Zomato,Just had an amazing experience with @Zomato. Thanks for the great service! #happy,positive,Cluster_1
+facebook,Amazon,Using Amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+instagram,PhonePe,Can you pay with crypto or UPI credit on PhonePe?,neutral,Cluster_4
+reddit,Swiggy,Why is it impossible to get help from a representative at Swiggy?,negative,Cluster_3
+instagram,PhonePe,"The automated bot on PhonePe is useless, can never speak to a human.",negative,Cluster_4
+reddit,Flipkart,Is Flipkart servers down for anyone else right now?,neutral,Cluster_6
+instagram,PhonePe,Is PhonePe servers down for anyone else right now?,neutral,Cluster_4
+instagram,Amazon,Loved the discount and lightning fast shipping on Amazon today! 🎉,positive,Cluster_0
+reddit,Amazon,Amazon arbitrarily rejected my valid return and refund claim.,negative,Cluster_2
+reddit,Zomato,Received a spoiled item from Zomato. Horrible quality check.,negative,Cluster_1
+reddit,Zomato,Just had an amazing experience with @Zomato. Thanks for the great service! #happy,positive,Cluster_1
+reddit,PhonePe,saw an advertisement for phonepe on youtube yesterday.,neutral,Cluster_4
+twitter,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4
+twitter,PhonePe,Loved the discount and lightning fast shipping on PhonePe today! 🎉,positive,Cluster_0
+reddit,Swiggy,highly recommend swiggy for everyone! great delivery and lovely packaging. #awesome,positive,Cluster_3
+instagram,PhonePe,Can you pay with crypto or UPI credit on PhonePe?,neutral,Cluster_4
+instagram,Paytm,Paytm customer support is totally unresponsive and useless.,negative,Cluster_5
+twitter,Amazon,Amazon arbitrarily rejected my valid return and refund claim.,negative,Cluster_2
+reddit,PhonePe,why is it impossible to get help from a representative at phonepe?,negative,Cluster_4
+facebook,Amazon,Does anyone know how to change payment method on Amazon?,neutral,Cluster_2
+twitter,Paytm,Paytm arbitrarily rejected my valid return and refund claim.,negative,Cluster_5
+instagram,PhonePe,Is PhonePe servers down for anyone else right now?,neutral,Cluster_4
+instagram,Zomato,Absolutely fantastic service and prompt support from Zomato today.,positive,Cluster_1
+instagram,PhonePe,Kudos to the PhonePe team for always delivering top quality products.,positive,Cluster_4
+facebook,Flipkart,Still waiting for my pending refund from Flipkart after 3 weeks.,negative,Cluster_6
+facebook,Swiggy,Waiting for my scheduled delivery from Swiggy.,neutral,Cluster_3
+facebook,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4
+instagram,Zomato,Five stars for Zomato! Loved the fast response and on-time order.,positive,Cluster_1
+twitter,Swiggy,Not what I expected from Swiggy. Looks fake and cheap.,negative,Cluster_3
+reddit,Zomato,Pleasantly surprised by how quickly Zomato handled my inquiry.,positive,Cluster_1
+instagram,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+twitter,Zomato,Outstanding customer support from Zomato. Solved my issue within 5 minutes!,positive,Cluster_1
+reddit,Zomato,"Great delivery by @Zomato, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+instagram,Zomato,"late delivery again, zomato is so inconsistent and delayed.",negative,Cluster_1
+instagram,Swiggy,"Very good experience with Swiggy. Easy to use, fast refunds when requested.",positive,Cluster_3
+twitter,Zomato,@Zomato please check your direct messages regarding my ticket.,neutral,Cluster_1
+twitter,Swiggy,Refund marked processed but not reflecting in my bank account from Swiggy.,negative,Cluster_3
+instagram,Paytm,Five stars for Paytm!!1! Loved the fast response and on-time order.,positive,Cluster_5
+reddit,Amazon,Highly recommend Amazon for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_0
+facebook,PhonePe,I demand my money back PhonePe! Fraudulent refusal to refund.,negative,Cluster_4
+instagram,Flipkart,Flipkart is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_6
+facebook,Flipkart,Just comparing prices between Flipkart and other apps.,neutral,Cluster_6
+twitter,PhonePe,"Food from PhonePe was cold, stale, and smelled awful.",negative,Cluster_4
+instagram,Flipkart,Terrible quality from Flipkart. Defective product right out of the box.,negative,Cluster_6
+reddit,Paytm,Hidden fees and unauthorized charges on Paytm? Disgusting practice.,negative,Cluster_5
+twitter,Zomato,How long does standard delivery take on Zomato?,neutral,Cluster_1
+facebook,Paytm,Just comparing prices between Paytm and other apps.,neutral,Cluster_5
+twitter,Swiggy,Still waiting for my pending refund from Swiggy after 3 weeks.,negative,Cluster_3
+twitter,Swiggy,Fix your buggy and glitchy app @Swiggy! Buttons don't respond.,negative,Cluster_3
+facebook,Swiggy,Five stars for Swiggy! Loved the fast response and on-time order.,positive,Cluster_3
+facebook,Zomato,Notice: Zomato scheduled maintenance tonight at midnight.,neutral,Cluster_1
+twitter,Zomato,Highly recommend Zomato for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_1
+instagram,Zomato,Just comparing prices between Zomato and other apps.,neutral,Cluster_1
+twitter,Swiggy,Outstanding customer support from Swiggy. Solved my issue within 5 minutes!,positive,Cluster_3
+twitter,Flipkart,Payment failed but the money was deducted from my bank by Flipkart.,negative,Cluster_6
+twitter,Paytm,highly recommend paytm for everyone! great delivery and lovely packaging. #awesome,positive,Cluster_5
+reddit,Flipkart,love using flipkart! always reliable and fast. 💯,positive,Cluster_6
+instagram,Zomato,seamless payment experience on zomato. really happy with the new update.,positive,Cluster_1
+twitter,Amazon,"The automated bot on Amazon is useless, can never speak to a human.",negative,Cluster_2
+instagram,Flipkart,"Late delivery again, Flipkart is so inconsistent and delayed.",negative,Cluster_6
+instagram,Swiggy,"Great app, smooth UI and seamless checkout. Keep it up Swiggy.",positive,Cluster_3
+twitter,Flipkart,Notice: Flipkart scheduled maintenance tonight at midnight.,neutral,Cluster_6
+facebook,Zomato,Trying out Zomato for the first time this week.,neutral,Cluster_1
+instagram,Amazon,"Very good experience with Amazon. Easy to use, fast refunds when requested.",positive,Cluster_2
+twitter,Paytm,Five stars for Paytm! Loved the fast response and on-time order.,positive,Cluster_5
+facebook,Zomato,Zomato is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_1
+twitter,Zomato,"Best platform ever, @Zomato you guys rock! Five stars! ✨",positive,Cluster_1
+facebook,Amazon,Notice: Amazon scheduled maintenance tonight at midnight.,neutral,Cluster_2
+facebook,Zomato,Critical bug in Zomato app: cart empties itself on checkout.,negative,Cluster_1
+twitter,Amazon,the amazon app keeps crashing constantly when i try to pay.,negative,Cluster_2
+facebook,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1
+instagram,Amazon,Amazon customer support is totally unresponsive and useless.,negative,Cluster_2
+facebook,Flipkart,Everything arrived in perfect condition. Thank you @Flipkart!,positive,Cluster_0
+twitter,Paytm,What are good alternative platforms to Paytm?,neutral,Cluster_5
+instagram,Amazon,Tracking status says delivered but I received nothing from Amazon.,negative,Cluster_2
+instagram,Paytm,highly recommend paytm for everyone! great delivery and lovely packaging. #awesome,positive,Cluster_5
+facebook,Zomato,Delicious food and timely delivery by Zomato. Will order again!,positive,Cluster_1
+instagram,Swiggy,Using Swiggy makes my daily routine so much easier and pleasant.,positive,Cluster_3
+reddit,Swiggy,worst customer service experience ever with @swiggy. rude agents.,negative,Cluster_3
+reddit,Amazon,Can you pay with crypto or UPI credit on Amazon?,neutral,Cluster_2
+facebook,Flipkart,Not what I expected from Flipkart. Looks fake and cheap.,negative,Cluster_6
+instagram,Amazon,i demand my money back amazon! fraudulent refusal to refund.,negative,Cluster_2
+reddit,Amazon,Outstanding customer support from Amazon. Solved my issue within 5 minutes!,positive,Cluster_2
+reddit,Amazon,Not what I expected from Amazon. Looks fake and cheap.,negative,Cluster_2
+facebook,Amazon,Highly recommend Amazon for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_0
+twitter,PhonePe,everything arrived in perfect condition. thank you @phonepe!,positive,Cluster_0
+facebook,Swiggy,Just had an amazing experience with @Swiggy. Thanks for the great service!!1! #happy,positive,Cluster_3
+facebook,PhonePe,Pleasantly surprised by how quickly PhonePe handled my inquiry.,positive,Cluster_4
+instagram,Flipkart,The item I received from Flipkart is broken and counterfeit.,negative,Cluster_6
+twitter,Paytm,is paytm servers down for anyone else right now?,neutral,Cluster_5
+facebook,Paytm,Never got my delivery from @Paytm. Worst service ever.,negative,Cluster_5
+instagram,Amazon,Just comparing prices between Amazon and other apps.,neutral,Cluster_2
+reddit,PhonePe,Outstanding customer support from PhonePe. Solved my issue within 5 minutes!,positive,Cluster_4
+instagram,PhonePe,How long does standard delivery take on PhonePe?,neutral,Cluster_4
+instagram,Zomato,Waiting for my scheduled delivery from Zomato.,neutral,Cluster_1
+facebook,Zomato,Why is it impossible to get help from a representative at Zomato?,negative,Cluster_1
+twitter,PhonePe,"Great app, smooth UI and seamless checkout. Keep it up PhonePe.",positive,Cluster_4
+facebook,Amazon,Thank you Amazon for the quick resolution and courteous team 😊,positive,Cluster_2
+instagram,Amazon,Where is my money @Amazon? Refund not processed after return #scam,negative,Cluster_2
+instagram,Swiggy,Just had an amazing experience with @Swiggy. Thanks for the great service! #happy,positive,Cluster_3
+facebook,Amazon,Using Amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+instagram,Zomato,Tracking status says delivered but I received nothing from Zomato.,negative,Cluster_1
+instagram,Amazon,"Great app, smooth UI and seamless checkout. Keep it up Amazon.",positive,Cluster_2
+twitter,Paytm,App freezes every time I open the search tab on Paytm.,negative,Cluster_5
+instagram,Amazon,Kudos to the Amazon team for always delivering top quality products.,positive,Cluster_2
+twitter,Swiggy,tracking status says delivered but i received nothing from swiggy.,negative,Cluster_3
+reddit,Paytm,can you pay with crypto or upi credit on paytm?,neutral,Cluster_5
+instagram,Flipkart,Using Flipkart makes my daily routine so much easier and pleasant.,positive,Cluster_6
+instagram,PhonePe,Five stars for PhonePe! Loved the fast response and on-time order.,positive,Cluster_4
+facebook,Amazon,Trying out Amazon for the first time this week.,neutral,Cluster_2
+instagram,PhonePe,I demand my money back PhonePe! Fraudulent refusal to refund.,negative,Cluster_4
+reddit,Swiggy,Fix your buggy and glitchy app @Swiggy! Buttons don't respond.,negative,Cluster_3
+instagram,Swiggy,Love using Swiggy! Always reliable and fast. 💯,positive,Cluster_3
+twitter,Swiggy,Overcharged by Swiggy on checkout and support refuses to adjust the bill.,negative,Cluster_3
+twitter,Flipkart,"Best platform ever, @Flipkart you guys rock! Five stars! ✨",positive,Cluster_6
+twitter,Paytm,The packaging from @Paytm was completely crushed and leaking.,negative,Cluster_0
+instagram,Flipkart,"Best platform ever, @Flipkart you guys rock! Five stars! ✨",positive,Cluster_6
+twitter,PhonePe,"Returned the order 10 days ago, still no sign of refund from PhonePe.",negative,Cluster_4
+reddit,Flipkart,"Very good experience with Flipkart. Easy to use, fast refunds when requested.",positive,Cluster_6
+instagram,Flipkart,Love using Flipkart!!1! Always reliable and fast. 💯,positive,Cluster_6
+instagram,Flipkart,Support representative closed my ticket without resolving anything on Flipkart.,negative,Cluster_6
+twitter,Amazon,The packaging from @Amazon was completely crushed and leaking.,negative,Cluster_0
+facebook,PhonePe,Just had an amazing experience with @PhonePe. Thanks for the great service! #happy,positive,Cluster_4
+facebook,Amazon,Five stars for Amazon! Loved the fast response and on-time order.,positive,Cluster_2
+reddit,Zomato,Where is my money @Zomato? Refund not processed after return #scam,negative,Cluster_1
+facebook,PhonePe,Received a spoiled item from PhonePe. Horrible quality check.,negative,Cluster_4
+facebook,Paytm,"Great app, smooth UI and seamless checkout. Keep it up Paytm.",positive,Cluster_5
+reddit,PhonePe,The PhonePe app keeps crashing constantly when I try to pay.,negative,Cluster_4
+instagram,PhonePe,I demand my money back PhonePe! Fraudulent refusal to refund.,negative,Cluster_4
+instagram,Amazon,Outstanding customer support from Amazon. Solved my issue within 5 minutes!,positive,Cluster_2
+facebook,Amazon,Amazon charged my account twice for the exact same order.,negative,Cluster_2
+twitter,Swiggy,love using swiggy! always reliable and fast. 💯,positive,Cluster_3
+reddit,Flipkart,Can you pay with crypto or UPI credit on Flipkart?,neutral,Cluster_6
+instagram,Zomato,Absolutely fantastic service and prompt support from Zomato today.,positive,Cluster_1
+facebook,Amazon,Using Amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+instagram,Zomato,Just had an amazing experience with @Zomato. Thanks for the great service! #happy,positive,Cluster_1
+reddit,PhonePe,Love using PhonePe! Always reliable and fast. 💯,positive,Cluster_4
+instagram,Zomato,Does anyone know how to change payment method on Zomato?,neutral,Cluster_1
+facebook,Paytm,Five stars for Paytm! Loved the fast response and on-time order.,positive,Cluster_5
+reddit,PhonePe,"great app, smooth ui and seamless checkout. keep it up phonepe.",positive,Cluster_4
+reddit,Paytm,thank you paytm for the quick resolution and courteous team 😊,positive,Cluster_5
+reddit,Amazon,Wondering if Amazon delivers to rural postal codes.,neutral,Cluster_2
+facebook,Paytm,Just downloaded the latest Paytm app update.,neutral,Cluster_5
+facebook,Zomato,Absolutely fantastic service and prompt support from Zomato today.,positive,Cluster_1
+facebook,Flipkart,@flipkart please check your direct messages regarding my ticket.,neutral,Cluster_6
+facebook,Amazon,Fix your buggy and glitchy app @Amazon! Buttons don't respond.,negative,Cluster_2
+reddit,Zomato,Saw an advertisement for Zomato on YouTube yesterday.,neutral,Cluster_1
+reddit,Flipkart,what are good alternative platforms to flipkart?,neutral,Cluster_6
+instagram,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4
+instagram,Flipkart,"great app, smooth ui and seamless checkout. keep it up flipkart.",positive,Cluster_6
+instagram,Flipkart,Flipkart website is completely broken on checkout page.,negative,Cluster_6
+reddit,Amazon,Fix your buggy and glitchy app @Amazon! Buttons don't respond.,negative,Cluster_2
+reddit,Amazon,Just downloaded the latest Amazon app update.,neutral,Cluster_2
+twitter,Amazon,@Amazon please check your direct messages regarding my ticket.,neutral,Cluster_2
+reddit,Swiggy,Why is it impossible to get help from a representative at Swiggy?,negative,Cluster_3
+facebook,Flipkart,Trying out Flipkart for the first time this week.,neutral,Cluster_6
+reddit,Amazon,Support representative closed my ticket without resolving anything on Amazon.,negative,Cluster_2
+twitter,Swiggy,"The automated bot on Swiggy is useless, can never speak to a human.",negative,Cluster_3
+twitter,Paytm,Terrible quality from Paytm. Defective product right out of the box.,negative,Cluster_5
+facebook,Swiggy,Refund marked processed but not reflecting in my bank account from Swiggy.,negative,Cluster_3
+reddit,Zomato,Has anyone tried the new premium subscription on Zomato?,neutral,Cluster_1
+twitter,Flipkart,Five stars for Flipkart! Loved the fast response and on-time order.,positive,Cluster_6
+twitter,PhonePe,Terrible quality from PhonePe. Defective product right out of the box.,negative,Cluster_4
+reddit,Amazon,Amazon is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_2
+reddit,Zomato,Highly recommend Zomato for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_1
+instagram,Zomato,Wondering if Zomato delivers to rural postal codes.,neutral,Cluster_1
+twitter,Swiggy,five stars for swiggy!!1! loved the fast response and on-time order.,positive,Cluster_3
+instagram,Flipkart,Flipkart arbitrarily rejected my valid return and refund claim.,negative,Cluster_6
+twitter,Amazon,Can you pay with crypto or UPI credit on Amazon?,neutral,Cluster_2
+instagram,Amazon,What are good alternative platforms to Amazon?,neutral,Cluster_2
+facebook,Paytm,Why did my subscription for Paytm auto-renew after I cancelled?,negative,Cluster_5
+reddit,Swiggy,Loved the discount and lightning fast shipping on Swiggy today! 🎉,positive,Cluster_3
+facebook,Swiggy,Support representative closed my ticket without resolving anything on Swiggy.,negative,Cluster_3
+facebook,Paytm,"The automated bot on Paytm is useless, can never speak to a human.",negative,Cluster_5
+instagram,Flipkart,"Can't log into my Flipkart account, getting internal error 500.",negative,Cluster_6
+reddit,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4
+facebook,Swiggy,Why did my subscription for Swiggy auto-renew after I cancelled?,negative,Cluster_3
+instagram,PhonePe,Support representative closed my ticket without resolving anything on PhonePe.,negative,Cluster_4
+facebook,Zomato,Saw an advertisement for Zomato on YouTube yesterday.,neutral,Cluster_1
+instagram,PhonePe,PhonePe customer support is totally unresponsive and useless.,negative,Cluster_4
+instagram,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4
+reddit,Swiggy,Super impressed with @Swiggy! The driver was polite and order arrived early.,positive,Cluster_0
+reddit,Amazon,Does anyone know how to change payment method on Amazon?,neutral,Cluster_2
+reddit,Amazon,The packaging from @Amazon was completely crushed and leaking.,negative,Cluster_0
+twitter,Zomato,Wondering if Zomato delivers to rural postal codes.,neutral,Cluster_1
+reddit,Zomato,"Great app, smooth UI and seamless checkout. Keep it up Zomato.",positive,Cluster_1
+facebook,Zomato,Zomato arbitrarily rejected my valid return and refund claim.,negative,Cluster_1
+instagram,Flipkart,@Flipkart please check your direct messages regarding my ticket.,neutral,Cluster_6
+instagram,Amazon,Fix your buggy and glitchy app @Amazon! Buttons don't respond.,negative,Cluster_2
+twitter,Zomato,"Late delivery again, Zomato is so inconsistent and delayed.",negative,Cluster_1
+instagram,Swiggy,Love using Swiggy! Always reliable and fast. 💯,positive,Cluster_3
+facebook,Paytm,Five stars for Paytm! Loved the fast response and on-time order.,positive,Cluster_5
+twitter,Flipkart,wondering if flipkart delivers to rural postal codes.,neutral,Cluster_6
+facebook,PhonePe,Trying out PhonePe for the first time this week.,neutral,Cluster_4
+facebook,Zomato,Thank you Zomato for the quick resolution and courteous team 😊,positive,Cluster_1
+instagram,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0
+instagram,PhonePe,Highly recommend PhonePe for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_4
+facebook,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+twitter,Amazon,Amazon is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_2
+facebook,PhonePe,Seamless payment experience on PhonePe. Really happy with the new update.,positive,Cluster_4
+facebook,Amazon,Payment failed but the money was deducted from my bank by Amazon.,negative,Cluster_2
+instagram,Paytm,Trying out Paytm for the first time this week.,neutral,Cluster_5
+facebook,Amazon,Waited 4 hours for my food delivery from @Amazon. Disgraceful delay.,negative,Cluster_2
+instagram,Swiggy,Outstanding customer support from Swiggy. Solved my issue within 5 minutes!,positive,Cluster_3
+instagram,Zomato,Seamless payment experience on Zomato. Really happy with the new update.,positive,Cluster_1
+reddit,Amazon,The item I received from Amazon is broken and counterfeit.,negative,Cluster_2
+instagram,Swiggy,My billing invoice from Swiggy has duplicate charges and incorrect tax.,negative,Cluster_3
+facebook,Amazon,Support representative closed my ticket without resolving anything on Amazon.,negative,Cluster_2
+twitter,Amazon,"Great app, smooth UI and seamless checkout. Keep it up Amazon.",positive,Cluster_2
+facebook,Zomato,Just had an amazing experience with @Zomato. Thanks for the great service! #happy,positive,Cluster_1
+reddit,Zomato,Using Zomato makes my daily routine so much easier and pleasant.,positive,Cluster_1
+instagram,Zomato,Just downloaded the latest Zomato app update.,neutral,Cluster_1
+twitter,Flipkart,Overcharged by Flipkart on checkout and support refuses to adjust the bill.,negative,Cluster_6
+reddit,PhonePe,Has anyone tried the new premium subscription on PhonePe?,neutral,Cluster_4
+instagram,Paytm,Why did my subscription for Paytm auto-renew after I cancelled?,negative,Cluster_5
+facebook,Swiggy,Love using Swiggy! Always reliable and fast. 💯,positive,Cluster_3
+instagram,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4
+instagram,Zomato,Can you pay with crypto or UPI credit on Zomato?,neutral,Cluster_1
+twitter,PhonePe,Love using PhonePe! Always reliable and fast. 💯,positive,Cluster_4
+instagram,Zomato,Waited 4 hours for my food delivery from @Zomato. Disgraceful delay.,negative,Cluster_1
+instagram,Amazon,Critical bug in Amazon app: cart empties itself on checkout.,negative,Cluster_2
+reddit,Zomato,Just had an amazing experience with @Zomato. Thanks for the great service! #happy,positive,Cluster_1
+twitter,Zomato,Highly recommend Zomato for everyone!!1! Great delivery and lovely packaging. #awesome,positive,Cluster_1
+facebook,Amazon,Notice: Amazon scheduled maintenance tonight at midnight.,neutral,Cluster_2
+facebook,Swiggy,Waited 4 hours for my food delivery from @Swiggy. Disgraceful delay.,negative,Cluster_3
+reddit,PhonePe,Just comparing prices between PhonePe and other apps.,neutral,Cluster_4
+instagram,Paytm,Love using Paytm! Always reliable and fast. 💯,positive,Cluster_5
+facebook,Swiggy,still waiting for my pending refund from swiggy after 3 weeks.,negative,Cluster_3
+reddit,Paytm,Highly recommend Paytm for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_5
+instagram,Zomato,Kudos to the Zomato team for always delivering top quality products.,positive,Cluster_1
+twitter,Zomato,Loved the discount and lightning fast shipping on Zomato today! 🎉,positive,Cluster_1
+instagram,PhonePe,can you pay with crypto or upi credit on phonepe?,neutral,Cluster_4
+reddit,Zomato,Notice: Zomato scheduled maintenance tonight at midnight.,neutral,Cluster_1
+instagram,PhonePe,"Great app, smooth UI and seamless checkout. Keep it up PhonePe.",positive,Cluster_4
+reddit,Swiggy,Trying out Swiggy for the first time this week.,neutral,Cluster_3
+reddit,Swiggy,"The automated bot on Swiggy is useless, can never speak to a human.",negative,Cluster_3
+facebook,Paytm,Wondering if Paytm delivers to rural postal codes.,neutral,Cluster_5
+instagram,PhonePe,Terrible quality from PhonePe. Defective product right out of the box.,negative,Cluster_4
+instagram,Paytm,Absolutely fantastic service and prompt support from Paytm today.,positive,Cluster_5
+facebook,Amazon,"Very good experience with Amazon. Easy to use, fast refunds when requested.",positive,Cluster_2
+facebook,Zomato,Zomato charged my account twice for the exact same order.,negative,Cluster_1
+twitter,Paytm,Thank you Paytm for the quick resolution and courteous team 😊,positive,Cluster_5
+facebook,Paytm,The item I received from Paytm is broken and counterfeit.,negative,Cluster_5
+facebook,Amazon,Amazon charged my account twice for the exact same order.,negative,Cluster_2
+reddit,Flipkart,Waiting for my scheduled delivery from Flipkart.,neutral,Cluster_6
+twitter,Paytm,Why did my subscription for Paytm auto-renew after I cancelled?,negative,Cluster_5
+twitter,PhonePe,Package arrived completely damaged due to careless handling by PhonePe.,negative,Cluster_4
+instagram,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1
+instagram,Paytm,Has anyone tried the new premium subscription on Paytm?,neutral,Cluster_5
+twitter,Paytm,I think Paytm changed their user interface today.,neutral,Cluster_5
+reddit,Amazon,Using Amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+twitter,Swiggy,Is Swiggy servers down for anyone else right now?,neutral,Cluster_3
+twitter,Swiggy,Pleasantly surprised by how quickly Swiggy handled my inquiry.,positive,Cluster_3
+facebook,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4
+twitter,PhonePe,"Can't log into my PhonePe account, getting internal error 500.",negative,Cluster_4
+instagram,Flipkart,Super impressed with @Flipkart! The driver was polite and order arrived early.,positive,Cluster_0
+reddit,PhonePe,critical bug in phonepe app: cart empties itself on checkout.,negative,Cluster_4
+instagram,Paytm,Does anyone know how to change payment method on Paytm?,neutral,Cluster_5
+reddit,Amazon,Worst customer service experience ever with @Amazon. Rude agents.,negative,Cluster_2
+reddit,Swiggy,can you pay with crypto or upi credit on swiggy?,neutral,Cluster_3
+twitter,PhonePe,Highly recommend PhonePe for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_4
+twitter,Amazon,Waiting for my scheduled delivery from Amazon.,neutral,Cluster_2
+twitter,Zomato,The packaging from @Zomato was completely crushed and leaking.,negative,Cluster_0
+twitter,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1
+twitter,Amazon,Amazon is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_2
+facebook,Flipkart,"Great delivery by @Flipkart, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+reddit,Amazon,How long does standard delivery take on Amazon?,neutral,Cluster_2
+twitter,Amazon,Still waiting for my pending refund from Amazon after 3 weeks.,negative,Cluster_2
+facebook,Paytm,pleasantly surprised by how quickly paytm handled my inquiry.,positive,Cluster_5
+twitter,Zomato,Can you pay with crypto or UPI credit on Zomato?,neutral,Cluster_1
+facebook,PhonePe,PhonePe arbitrarily rejected my valid return and refund claim.,negative,Cluster_4
+facebook,Paytm,"Late delivery again, Paytm is so inconsistent and delayed.",negative,Cluster_5
+reddit,PhonePe,"Very good experience with PhonePe. Easy to use, fast refunds when requested.",positive,Cluster_4
+facebook,Paytm,Thank you Paytm for the quick resolution and courteous team 😊,positive,Cluster_5
+instagram,Flipkart,Waiting for my scheduled delivery from Flipkart.,neutral,Cluster_6
+twitter,Paytm,"Very good experience with Paytm. Easy to use, fast refunds when requested.",positive,Cluster_5
+facebook,Amazon,Highly recommend Amazon for everyone! Great delivery and lovely packaging. #awesome,positive,Cluster_0
+instagram,Swiggy,"Returned the order 10 days ago, still no sign of refund from Swiggy.",negative,Cluster_3
+facebook,Flipkart,Seamless payment experience on Flipkart. Really happy with the new update.,positive,Cluster_6
+instagram,PhonePe,Loved the discount and lightning fast shipping on PhonePe today! 🎉,positive,Cluster_0
+twitter,Flipkart,Been stuck on hold for 45 mins with Flipkart phone support.,negative,Cluster_6
+facebook,Swiggy,I think Swiggy changed their user interface today.,neutral,Cluster_3
+facebook,Zomato,Has anyone tried the new premium subscription on Zomato?,neutral,Cluster_1
+twitter,PhonePe,Using PhonePe makes my daily routine so much easier and pleasant.,positive,Cluster_4
+twitter,Swiggy,just comparing prices between swiggy and other apps.,neutral,Cluster_3
+reddit,Amazon,Has anyone tried the new premium subscription on Amazon?,neutral,Cluster_2
+reddit,PhonePe,How long does standard delivery take on PhonePe?,neutral,Cluster_4
+facebook,PhonePe,"Great app, smooth UI and seamless checkout. Keep it up PhonePe.",positive,Cluster_4
+twitter,PhonePe,"Best platform ever, @PhonePe you guys rock! Five stars! ✨",positive,Cluster_4
+instagram,Flipkart,Can you pay with crypto or UPI credit on Flipkart?,neutral,Cluster_6
+reddit,Flipkart,is flipkart servers down for anyone else right now?,neutral,Cluster_6
+facebook,Swiggy,"best platform ever, @swiggy you guys rock! five stars! ✨",positive,Cluster_3
+reddit,Swiggy,Why did my subscription for Swiggy auto-renew after I cancelled?,negative,Cluster_3
+facebook,Amazon,Wondering if Amazon delivers to rural postal codes.,neutral,Cluster_2
+reddit,Zomato,Is Zomato servers down for anyone else right now?,neutral,Cluster_1
+reddit,Swiggy,"Best platform ever, @Swiggy you guys rock! Five stars! ✨",positive,Cluster_3
+reddit,Zomato,The Zomato app keeps crashing constantly when I try to pay.,negative,Cluster_1
+facebook,Amazon,Thank you Amazon for the quick resolution and courteous team 😊,positive,Cluster_2
+instagram,Amazon,Trying out Amazon for the first time this week.,neutral,Cluster_2
+reddit,Zomato,Waiting for my scheduled delivery from Zomato.,neutral,Cluster_1
+twitter,Flipkart,I think Flipkart changed their user interface today.,neutral,Cluster_6
+instagram,Amazon,Does anyone know how to change payment method on Amazon?,neutral,Cluster_2
+twitter,Zomato,Notice: Zomato scheduled maintenance tonight at midnight.,neutral,Cluster_1
+instagram,Amazon,Kudos to the Amazon team for always delivering top quality products.,positive,Cluster_2
+reddit,Flipkart,@Flipkart please check your direct messages regarding my ticket.,neutral,Cluster_6
+facebook,PhonePe,Received a spoiled item from PhonePe. Horrible quality check.,negative,Cluster_4
+instagram,Amazon,Trying out Amazon for the first time this week.,neutral,Cluster_2
+reddit,PhonePe,"Great app, smooth UI and seamless checkout. Keep it up PhonePe.",positive,Cluster_4
+twitter,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4
+twitter,PhonePe,"Returned the order 10 days ago, still no sign of refund from PhonePe.",negative,Cluster_4
+reddit,Paytm,"Food from Paytm was cold, stale, and smelled awful.",negative,Cluster_5
+twitter,Paytm,Trying out Paytm for the first time this week.,neutral,Cluster_5
+facebook,Amazon,Pleasantly surprised by how quickly Amazon handled my inquiry.,positive,Cluster_2
+twitter,Paytm,Loved the discount and lightning fast shipping on Paytm today! 🎉,positive,Cluster_0
+facebook,Flipkart,"Great delivery by @Flipkart, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+facebook,Swiggy,Fix your buggy and glitchy app @Swiggy! Buttons don't respond.,negative,Cluster_3
+instagram,Zomato,Overcharged by Zomato on checkout and support refuses to adjust the bill.,negative,Cluster_1
+reddit,PhonePe,Using PhonePe makes my daily routine so much easier and pleasant.,positive,Cluster_4
+instagram,Zomato,Still waiting for my pending refund from Zomato after 3 weeks.,negative,Cluster_1
+twitter,Flipkart,The packaging from @Flipkart was completely crushed and leaking.,negative,Cluster_0
+twitter,Paytm,I think Paytm changed their user interface today.,neutral,Cluster_5
+reddit,Flipkart,fix your buggy and glitchy app @flipkart! buttons don't respond.,negative,Cluster_6
+twitter,PhonePe,Everything arrived in perfect condition. Thank you @PhonePe!,positive,Cluster_0
+twitter,Swiggy,Received a spoiled item from Swiggy. Horrible quality check.,negative,Cluster_3
+facebook,PhonePe,The item I received from PhonePe is broken and counterfeit.,negative,Cluster_4
+instagram,PhonePe,Still waiting for my pending refund from PhonePe after 3 weeks.,negative,Cluster_4
+facebook,Amazon,My billing invoice from Amazon has duplicate charges and incorrect tax.,negative,Cluster_2
+twitter,Amazon,Just had an amazing experience with @Amazon. Thanks for the great service! #happy,positive,Cluster_2
+facebook,PhonePe,Is PhonePe servers down for anyone else right now?,neutral,Cluster_4
+reddit,Flipkart,Notice: Flipkart scheduled maintenance tonight at midnight.,neutral,Cluster_6
+twitter,PhonePe,"very good experience with phonepe. easy to use, fast refunds when requested.",positive,Cluster_4
+facebook,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4
+instagram,Zomato,Super impressed with @Zomato! The driver was polite and order arrived early.,positive,Cluster_0
+twitter,PhonePe,Can you pay with crypto or UPI credit on PhonePe?,neutral,Cluster_4
+instagram,Flipkart,Has anyone tried the new premium subscription on Flipkart?,neutral,Cluster_6
+facebook,Amazon,Waiting for my scheduled delivery from Amazon.,neutral,Cluster_2
+twitter,Swiggy,"Can't log into my Swiggy account, getting internal error 500.",negative,Cluster_3
+instagram,Swiggy,"Returned the order 10 days ago, still no sign of refund from Swiggy.",negative,Cluster_3
+instagram,Flipkart,Been stuck on hold for 45 mins with Flipkart phone support.,negative,Cluster_6
+instagram,Swiggy,My order from Swiggy is 3 days late! 😡 #fail #terrible,negative,Cluster_3
+twitter,PhonePe,The PhonePe app keeps crashing constantly when I try to pay.,negative,Cluster_4
+facebook,PhonePe,Seamless payment experience on PhonePe. Really happy with the new update.,positive,Cluster_4
+instagram,Zomato,Has anyone tried the new premium subscription on Zomato?,neutral,Cluster_1
+twitter,Zomato,Zomato website is completely broken on checkout page.,negative,Cluster_1
+reddit,Amazon,Super impressed with @Amazon!!1! The driver was polite and order arrived early.,positive,Cluster_0
+twitter,PhonePe,Super impressed with @PhonePe! The driver was polite and order arrived early.,positive,Cluster_0
+instagram,Swiggy,Using Swiggy makes my daily routine so much easier and pleasant.,positive,Cluster_3
+reddit,Zomato,Thank you Zomato for the quick resolution and courteous team 😊,positive,Cluster_1
+facebook,Zomato,Kudos to the Zomato team for always delivering top quality products.,positive,Cluster_1
+twitter,Flipkart,Just comparing prices between Flipkart and other apps.,neutral,Cluster_6
+instagram,Zomato,I think Zomato changed their user interface today.,neutral,Cluster_1
+instagram,Amazon,Trying out Amazon for the first time this week.,neutral,Cluster_2
+facebook,PhonePe,My billing invoice from PhonePe has duplicate charges and incorrect tax.,negative,Cluster_4
+instagram,Amazon,Amazon is the absolute best! Delivery was super quick. https://example.com/xyz,positive,Cluster_2
+reddit,Amazon,Where is my money @Amazon? Refund not processed after return #scam,negative,Cluster_2
+facebook,Swiggy,Does anyone know how to change payment method on Swiggy?,neutral,Cluster_3
+instagram,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4
+facebook,Swiggy,Support representative closed my ticket without resolving anything on Swiggy.,negative,Cluster_3
+reddit,Amazon,@Amazon please check your direct messages regarding my ticket.,neutral,Cluster_2
+facebook,Flipkart,"Great delivery by @Flipkart, loved it! Super fast and reliable. #satisfied",positive,Cluster_0
+twitter,Amazon,Not what I expected from Amazon. Looks fake and cheap.,negative,Cluster_2
+reddit,Swiggy,Using Swiggy makes my daily routine so much easier and pleasant.,positive,Cluster_3
+reddit,Paytm,Hidden fees and unauthorized charges on Paytm? Disgusting practice.,negative,Cluster_5
+facebook,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5
+twitter,Amazon,Seamless payment experience on Amazon. Really happy with the new update.,positive,Cluster_2
+twitter,Amazon,Using Amazon makes my daily routine so much easier and pleasant.,positive,Cluster_2
+facebook,Zomato,Terrible quality from Zomato. Defective product right out of the box.,negative,Cluster_1
+instagram,PhonePe,love using phonepe! always reliable and fast. 💯,positive,Cluster_4
+reddit,Zomato,Zomato website is completely broken on checkout page.,negative,Cluster_1
+instagram,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4
+facebook,Zomato,Why is it impossible to get help from a representative at Zomato?,negative,Cluster_1
+reddit,Swiggy,What are good alternative platforms to Swiggy?,neutral,Cluster_3
+facebook,Flipkart,What are good alternative platforms to Flipkart?,neutral,Cluster_6
+facebook,Zomato,Waited 4 hours for my food delivery from @Zomato. Disgraceful delay.,negative,Cluster_1
+facebook,Amazon,Thank you Amazon for the quick resolution and courteous team 😊,positive,Cluster_2
+reddit,Flipkart,Everything arrived in perfect condition. Thank you @Flipkart!,positive,Cluster_0
+facebook,PhonePe,What are good alternative platforms to PhonePe?,neutral,Cluster_4
+twitter,Flipkart,Absolutely fantastic service and prompt support from Flipkart today.,positive,Cluster_6
+facebook,Zomato,Just comparing prices between Zomato and other apps.,neutral,Cluster_1
+twitter,Amazon,Absolutely fantastic service and prompt support from Amazon today.,positive,Cluster_2
+twitter,Zomato,"best platform ever, @zomato you guys rock!!1! five stars!!1! ✨",positive,Cluster_1
+facebook,Zomato,Seamless payment experience on Zomato. Really happy with the new update.,positive,Cluster_1
+twitter,Swiggy,The item I received from Swiggy is broken and counterfeit.,negative,Cluster_3
+instagram,Flipkart,Notice: Flipkart scheduled maintenance tonight at midnight.,neutral,Cluster_6
+instagram,Amazon,Why did my subscription for Amazon auto-renew after I cancelled?,negative,Cluster_2
+twitter,Paytm,Delicious food and timely delivery by Paytm. Will order again!,positive,Cluster_0
+facebook,Swiggy,Absolutely fantastic service and prompt support from Swiggy today.,positive,Cluster_3
+twitter,PhonePe,Why is it impossible to get help from a representative at PhonePe?,negative,Cluster_4
+instagram,Paytm,Never got my delivery from @Paytm. Worst service ever.,negative,Cluster_5
+twitter,Swiggy,Everything arrived in perfect condition. Thank you @Swiggy!!1!,positive,Cluster_0
+reddit,Paytm,Pleasantly surprised by how quickly Paytm handled my inquiry.,positive,Cluster_5
+twitter,Zomato,Pleasantly surprised by how quickly Zomato handled my inquiry.,positive,Cluster_1
+twitter,Amazon,Support representative closed my ticket without resolving anything on Amazon.,negative,Cluster_2
+instagram,Zomato,Super impressed with @Zomato! The driver was polite and order arrived early.,positive,Cluster_0
