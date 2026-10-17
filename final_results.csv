@@ -1,16 +1,274 @@
 platform,brand,comment,sentiment,cluster,complaint_category
-Instagram,Samsung,Battery drains very quickly,Negative,0,Battery Issues
-YouTube,Samsung,Phone battery is terrible,Negative,0,Battery Issues
-Reddit,Samsung,Battery does not last a day,Negative,0,Battery Issues
-Instagram,Samsung,Customer support never replied,Negative,1,Customer Service
-YouTube,Samsung,Customer service was useless,Negative,1,Customer Service
-Reddit,Samsung,Nobody helped with my complaint,Negative,1,Customer Service
-Instagram,Samsung,Phone stopped working after one month,Negative,2,Product Quality
-YouTube,Samsung,The phone quality is disappointing,Negative,2,Product Quality
-Reddit,Samsung,Device broke very quickly,Negative,2,Product Quality
-Instagram,Samsung,Delivery was extremely late,Negative,3,Delivery Issues
-YouTube,Samsung,My order arrived five days late,Negative,3,Delivery Issues
-Reddit,Samsung,Shipping took too long,Negative,3,Delivery Issues
-Instagram,Samsung,The phone is too expensive,Negative,4,Pricing
-YouTube,Samsung,Price is not worth it,Negative,4,Pricing
-Reddit,Samsung,Too expensive for these features,Negative,4,Pricing
+twitter,PhonePe,fix your buggy and glitchy app @phonepe! buttons don't respond.,negative,Cluster_4,App & Technical Issues
+reddit,Flipkart,"The automated bot on Flipkart is useless, can never speak to a human.",negative,Cluster_6,Other Complaints
+twitter,Swiggy,The item I received from Swiggy is broken and counterfeit.,negative,Cluster_3,Product Quality Issues
+facebook,Flipkart,Been stuck on hold for 45 mins with Flipkart phone support.,negative,Cluster_6,Customer Service
+instagram,Amazon,Critical bug in Amazon app: cart empties itself on checkout.,negative,Cluster_2,App & Technical Issues
+facebook,Paytm,Received a spoiled item from Paytm. Horrible quality check.,negative,Cluster_5,Product Quality Issues
+reddit,PhonePe,waited 4 hours for my food delivery from @phonepe. disgraceful delay.,negative,Cluster_4,Delivery Issues
+facebook,PhonePe,The PhonePe app keeps crashing constantly when I try to pay.,negative,Cluster_4,App & Technical Issues
+facebook,Swiggy,Delivery driver from Swiggy was extremely rude and unhelpful.,negative,Cluster_3,Delivery Issues
+facebook,Paytm,"Can't log into my Paytm account, getting internal error 500.",negative,Cluster_5,App & Technical Issues
+twitter,PhonePe,PhonePe website is completely broken on checkout page.,negative,Cluster_4,App & Technical Issues
+reddit,PhonePe,"Food from PhonePe was cold, stale, and smelled awful.",negative,Cluster_4,Product Quality Issues
+instagram,Flipkart,The packaging from @Flipkart was completely crushed and leaking.,negative,Cluster_0,Product Quality Issues
+facebook,Paytm,Critical bug in Paytm app: cart empties itself on checkout.,negative,Cluster_5,App & Technical Issues
+reddit,Amazon,amazon customer support is totally unresponsive and useless.,negative,Cluster_2,Customer Service
+facebook,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0,Product Quality Issues
+instagram,Zomato,Terrible quality from Zomato. Defective product right out of the box.,negative,Cluster_1,Product Quality Issues
+instagram,Amazon,Where is my money @Amazon? Refund not processed after return #scam,negative,Cluster_2,Refund & Payment Issues
+instagram,Paytm,Been stuck on hold for 45 mins with Paytm phone support.,negative,Cluster_5,Customer Service
+instagram,Zomato,"Food from Zomato was cold, stale, and smelled awful.",negative,Cluster_1,Product Quality Issues
+twitter,Flipkart,Flipkart arbitrarily rejected my valid return and refund claim.,negative,Cluster_6,Refund & Payment Issues
+twitter,Swiggy,"Late delivery again, Swiggy is so inconsistent and delayed.",negative,Cluster_3,Delivery Issues
+instagram,Paytm,why is it impossible to get help from a representative at paytm?,negative,Cluster_5,Customer Service
+instagram,Paytm,App freezes every time I open the search tab on Paytm.,negative,Cluster_5,App & Technical Issues
+instagram,Paytm,Still waiting for my pending refund from Paytm after 3 weeks.,negative,Cluster_5,Refund & Payment Issues
+reddit,Paytm,"Late delivery again, Paytm is so inconsistent and delayed.",negative,Cluster_5,Delivery Issues
+reddit,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4,App & Technical Issues
+instagram,PhonePe,Hidden fees and unauthorized charges on PhonePe? Disgusting practice.,negative,Cluster_4,Other Complaints
+twitter,PhonePe,Overcharged by PhonePe on checkout and support refuses to adjust the bill.,negative,Cluster_4,Refund & Payment Issues
+twitter,Flipkart,Still waiting for my pending refund from Flipkart after 3 weeks.,negative,Cluster_6,Refund & Payment Issues
+facebook,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4,Delivery Issues
+twitter,Amazon,why did my subscription for amazon auto-renew after i cancelled?,negative,Cluster_2,Pricing & Subscription Issues
+instagram,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4,App & Technical Issues
+facebook,Zomato,app freezes every time i open the search tab on zomato.,negative,Cluster_1,App & Technical Issues
+twitter,Flipkart,Never got my delivery from @Flipkart. Worst service ever.,negative,Cluster_6,Delivery Issues
+reddit,Swiggy,Tracking status says delivered but I received nothing from Swiggy.,negative,Cluster_3,Delivery Issues
+reddit,PhonePe,PhonePe charged my account twice for the exact same order.,negative,Cluster_4,Refund & Payment Issues
+facebook,PhonePe,My order from PhonePe is 3 days late! 😡 #fail #terrible,negative,Cluster_4,Other Complaints
+twitter,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4,Refund & Payment Issues
+facebook,Flipkart,Payment failed but the money was deducted from my bank by Flipkart.,negative,Cluster_6,Refund & Payment Issues
+instagram,PhonePe,Delivery driver from PhonePe was extremely rude and unhelpful.,negative,Cluster_4,Delivery Issues
+reddit,Flipkart,"food from flipkart was cold, stale, and smelled awful.",negative,Cluster_6,Product Quality Issues
+reddit,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1,Refund & Payment Issues
+reddit,Amazon,"The automated bot on Amazon is useless, can never speak to a human.",negative,Cluster_2,Other Complaints
+twitter,Flipkart,Flipkart charged my account twice for the exact same order.,negative,Cluster_6,Refund & Payment Issues
+instagram,Flipkart,The item I received from Flipkart is broken and counterfeit.,negative,Cluster_6,Product Quality Issues
+instagram,Zomato,"Food from Zomato was cold, stale, and smelled awful.",negative,Cluster_1,Product Quality Issues
+facebook,Zomato,I demand my money back Zomato! Fraudulent refusal to refund.,negative,Cluster_1,Refund & Payment Issues
+facebook,Flipkart,Received a spoiled item from Flipkart. Horrible quality check.,negative,Cluster_6,Product Quality Issues
+instagram,Paytm,Still waiting for my pending refund from Paytm after 3 weeks.,negative,Cluster_5,Refund & Payment Issues
+reddit,Swiggy,Terrible quality from Swiggy. Defective product right out of the box.,negative,Cluster_3,Product Quality Issues
+facebook,PhonePe,Not what I expected from PhonePe. Looks fake and cheap.,negative,Cluster_4,Other Complaints
+facebook,Swiggy,Tracking status says delivered but I received nothing from Swiggy.,negative,Cluster_3,Delivery Issues
+reddit,Paytm,paytm website is completely broken on checkout page.,negative,Cluster_5,App & Technical Issues
+reddit,Swiggy,My order from Swiggy is 3 days late! 😡 #fail #terrible,negative,Cluster_3,Other Complaints
+instagram,Amazon,Delivery driver from Amazon was extremely rude and unhelpful.,negative,Cluster_2,Delivery Issues
+facebook,PhonePe,Payment failed but the money was deducted from my bank by PhonePe.,negative,Cluster_4,Refund & Payment Issues
+instagram,PhonePe,Why did my subscription for PhonePe auto-renew after I cancelled?,negative,Cluster_4,Pricing & Subscription Issues
+reddit,Zomato,Still waiting for my pending refund from Zomato after 3 weeks.,negative,Cluster_1,Refund & Payment Issues
+facebook,PhonePe,Still waiting for my pending refund from PhonePe after 3 weeks.,negative,Cluster_4,Refund & Payment Issues
+twitter,Zomato,Worst customer service experience ever with @Zomato. Rude agents.,negative,Cluster_1,Customer Service
+facebook,Swiggy,swiggy customer support is totally unresponsive and useless.,negative,Cluster_3,Customer Service
+reddit,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4,App & Technical Issues
+twitter,Swiggy,Swiggy charged my account twice for the exact same order.,negative,Cluster_3,Refund & Payment Issues
+instagram,Zomato,"The automated bot on Zomato is useless, can never speak to a human.",negative,Cluster_1,Other Complaints
+twitter,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5,Refund & Payment Issues
+facebook,Flipkart,"Late delivery again, Flipkart is so inconsistent and delayed.",negative,Cluster_6,Delivery Issues
+twitter,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5,Refund & Payment Issues
+instagram,Zomato,Support representative closed my ticket without resolving anything on Zomato.,negative,Cluster_1,Customer Service
+instagram,PhonePe,PhonePe customer support is totally unresponsive and useless.,negative,Cluster_4,Customer Service
+instagram,Paytm,Refund marked processed but not reflecting in my bank account from Paytm.,negative,Cluster_5,Refund & Payment Issues
+twitter,Amazon,why did my subscription for amazon auto-renew after i cancelled?,negative,Cluster_2,Pricing & Subscription Issues
+twitter,Paytm,Critical bug in Paytm app: cart empties itself on checkout.,negative,Cluster_5,App & Technical Issues
+facebook,Amazon,Worst customer service experience ever with @Amazon. Rude agents.,negative,Cluster_2,Customer Service
+facebook,Swiggy,Waited 4 hours for my food delivery from @Swiggy. Disgraceful delay.,negative,Cluster_3,Delivery Issues
+facebook,Zomato,"Food from Zomato was cold, stale, and smelled awful.",negative,Cluster_1,Product Quality Issues
+twitter,Swiggy,refund marked processed but not reflecting in my bank account from swiggy.,negative,Cluster_3,Refund & Payment Issues
+facebook,PhonePe,phonepe customer support is totally unresponsive and useless.,negative,Cluster_4,Customer Service
+instagram,Amazon,Overcharged by Amazon on checkout and support refuses to adjust the bill.,negative,Cluster_2,Refund & Payment Issues
+instagram,Zomato,Never got my delivery from @Zomato. Worst service ever.,negative,Cluster_1,Delivery Issues
+twitter,Zomato,Where is my money @Zomato? Refund not processed after return #scam,negative,Cluster_1,Refund & Payment Issues
+facebook,Flipkart,"Can't log into my Flipkart account, getting internal error 500.",negative,Cluster_6,App & Technical Issues
+instagram,PhonePe,the phonepe app keeps crashing constantly when i try to pay.,negative,Cluster_4,App & Technical Issues
+reddit,Zomato,overcharged by zomato on checkout and support refuses to adjust the bill.,negative,Cluster_1,Refund & Payment Issues
+instagram,PhonePe,"Food from PhonePe was cold, stale, and smelled awful.",negative,Cluster_4,Product Quality Issues
+instagram,PhonePe,Been stuck on hold for 45 mins with PhonePe phone support.,negative,Cluster_4,Customer Service
+facebook,PhonePe,PhonePe arbitrarily rejected my valid return and refund claim.,negative,Cluster_4,Refund & Payment Issues
+reddit,Paytm,why is it impossible to get help from a representative at paytm?,negative,Cluster_5,Customer Service
+facebook,Swiggy,Hidden fees and unauthorized charges on Swiggy? Disgusting practice.,negative,Cluster_3,Other Complaints
+facebook,Swiggy,Terrible quality from Swiggy. Defective product right out of the box.,negative,Cluster_3,Product Quality Issues
+instagram,Flipkart,App freezes every time I open the search tab on Flipkart.,negative,Cluster_6,App & Technical Issues
+facebook,Flipkart,Flipkart website is completely broken on checkout page.,negative,Cluster_6,App & Technical Issues
+facebook,Swiggy,App freezes every time I open the search tab on Swiggy.,negative,Cluster_3,App & Technical Issues
+instagram,PhonePe,Still waiting for my pending refund from PhonePe after 3 weeks.,negative,Cluster_4,Refund & Payment Issues
+facebook,Paytm,Fix your buggy and glitchy app @Paytm! Buttons don't respond.,negative,Cluster_5,App & Technical Issues
+reddit,Swiggy,Worst customer service experience ever with @Swiggy. Rude agents.,negative,Cluster_3,Customer Service
+twitter,Swiggy,support representative closed my ticket without resolving anything on swiggy.,negative,Cluster_3,Customer Service
+reddit,Paytm,Terrible quality from Paytm. Defective product right out of the box.,negative,Cluster_5,Product Quality Issues
+instagram,Amazon,"Late delivery again, Amazon is so inconsistent and delayed.",negative,Cluster_2,Delivery Issues
+reddit,Zomato,Zomato arbitrarily rejected my valid return and refund claim.,negative,Cluster_1,Refund & Payment Issues
+instagram,Amazon,Hidden fees and unauthorized charges on Amazon? Disgusting practice.,negative,Cluster_2,Other Complaints
+instagram,Zomato,Where is my money @Zomato? Refund not processed after return #scam,negative,Cluster_1,Refund & Payment Issues
+facebook,Zomato,The item I received from Zomato is broken and counterfeit.,negative,Cluster_1,Product Quality Issues
+facebook,Swiggy,Critical bug in Swiggy app: cart empties itself on checkout.,negative,Cluster_3,App & Technical Issues
+facebook,Paytm,Still waiting for my pending refund from Paytm after 3 weeks.,negative,Cluster_5,Refund & Payment Issues
+reddit,Swiggy,I demand my money back Swiggy! Fraudulent refusal to refund.,negative,Cluster_3,Refund & Payment Issues
+instagram,Flipkart,I demand my money back Flipkart! Fraudulent refusal to refund.,negative,Cluster_6,Refund & Payment Issues
+instagram,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4,App & Technical Issues
+twitter,PhonePe,Tracking status says delivered but I received nothing from PhonePe.,negative,Cluster_4,Delivery Issues
+reddit,Amazon,Delivery driver from Amazon was extremely rude and unhelpful.,negative,Cluster_2,Delivery Issues
+reddit,Paytm,Why is it impossible to get help from a representative at Paytm?,negative,Cluster_5,Customer Service
+instagram,Amazon,Still waiting for my pending refund from Amazon after 3 weeks.,negative,Cluster_2,Refund & Payment Issues
+facebook,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4,App & Technical Issues
+instagram,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5,Refund & Payment Issues
+reddit,Paytm,Paytm website is completely broken on checkout page.,negative,Cluster_5,App & Technical Issues
+twitter,Zomato,Fix your buggy and glitchy app @Zomato! Buttons don't respond.,negative,Cluster_1,App & Technical Issues
+instagram,PhonePe,Hidden fees and unauthorized charges on PhonePe? Disgusting practice.,negative,Cluster_4,Other Complaints
+instagram,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0,Product Quality Issues
+reddit,Zomato,Critical bug in Zomato app: cart empties itself on checkout.,negative,Cluster_1,App & Technical Issues
+instagram,Swiggy,"The automated bot on Swiggy is useless, can never speak to a human.",negative,Cluster_3,Other Complaints
+instagram,Swiggy,Not what I expected from Swiggy. Looks fake and cheap.,negative,Cluster_3,Other Complaints
+reddit,Paytm,Hidden fees and unauthorized charges on Paytm? Disgusting practice.,negative,Cluster_5,Other Complaints
+reddit,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0,Product Quality Issues
+reddit,Zomato,My order from Zomato is 3 days late! 😡 #fail #terrible,negative,Cluster_1,Other Complaints
+reddit,Paytm,The item I received from Paytm is broken and counterfeit.,negative,Cluster_5,Product Quality Issues
+twitter,PhonePe,not what i expected from phonepe. looks fake and cheap.,negative,Cluster_4,Other Complaints
+twitter,Paytm,Critical bug in Paytm app: cart empties itself on checkout.,negative,Cluster_5,App & Technical Issues
+reddit,Swiggy,Why is it impossible to get help from a representative at Swiggy?,negative,Cluster_3,Customer Service
+instagram,PhonePe,"The automated bot on PhonePe is useless, can never speak to a human.",negative,Cluster_4,Other Complaints
+reddit,Amazon,Amazon arbitrarily rejected my valid return and refund claim.,negative,Cluster_2,Refund & Payment Issues
+reddit,Zomato,Received a spoiled item from Zomato. Horrible quality check.,negative,Cluster_1,Product Quality Issues
+twitter,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4,Delivery Issues
+instagram,Paytm,Paytm customer support is totally unresponsive and useless.,negative,Cluster_5,Customer Service
+twitter,Amazon,Amazon arbitrarily rejected my valid return and refund claim.,negative,Cluster_2,Refund & Payment Issues
+reddit,PhonePe,why is it impossible to get help from a representative at phonepe?,negative,Cluster_4,Customer Service
+twitter,Paytm,Paytm arbitrarily rejected my valid return and refund claim.,negative,Cluster_5,Refund & Payment Issues
+facebook,Flipkart,Still waiting for my pending refund from Flipkart after 3 weeks.,negative,Cluster_6,Refund & Payment Issues
+facebook,PhonePe,Fix your buggy and glitchy app @PhonePe! Buttons don't respond.,negative,Cluster_4,App & Technical Issues
+twitter,Swiggy,Not what I expected from Swiggy. Looks fake and cheap.,negative,Cluster_3,Other Complaints
+instagram,Zomato,"late delivery again, zomato is so inconsistent and delayed.",negative,Cluster_1,Delivery Issues
+twitter,Swiggy,Refund marked processed but not reflecting in my bank account from Swiggy.,negative,Cluster_3,Refund & Payment Issues
+facebook,PhonePe,I demand my money back PhonePe! Fraudulent refusal to refund.,negative,Cluster_4,Refund & Payment Issues
+twitter,PhonePe,"Food from PhonePe was cold, stale, and smelled awful.",negative,Cluster_4,Product Quality Issues
+instagram,Flipkart,Terrible quality from Flipkart. Defective product right out of the box.,negative,Cluster_6,Product Quality Issues
+reddit,Paytm,Hidden fees and unauthorized charges on Paytm? Disgusting practice.,negative,Cluster_5,Other Complaints
+twitter,Swiggy,Still waiting for my pending refund from Swiggy after 3 weeks.,negative,Cluster_3,Refund & Payment Issues
+twitter,Swiggy,Fix your buggy and glitchy app @Swiggy! Buttons don't respond.,negative,Cluster_3,App & Technical Issues
+twitter,Flipkart,Payment failed but the money was deducted from my bank by Flipkart.,negative,Cluster_6,Refund & Payment Issues
+twitter,Amazon,"The automated bot on Amazon is useless, can never speak to a human.",negative,Cluster_2,Other Complaints
+instagram,Flipkart,"Late delivery again, Flipkart is so inconsistent and delayed.",negative,Cluster_6,Delivery Issues
+facebook,Zomato,Critical bug in Zomato app: cart empties itself on checkout.,negative,Cluster_1,App & Technical Issues
+twitter,Amazon,the amazon app keeps crashing constantly when i try to pay.,negative,Cluster_2,App & Technical Issues
+facebook,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1,Refund & Payment Issues
+instagram,Amazon,Amazon customer support is totally unresponsive and useless.,negative,Cluster_2,Customer Service
+instagram,Amazon,Tracking status says delivered but I received nothing from Amazon.,negative,Cluster_2,Delivery Issues
+reddit,Swiggy,worst customer service experience ever with @swiggy. rude agents.,negative,Cluster_3,Customer Service
+facebook,Flipkart,Not what I expected from Flipkart. Looks fake and cheap.,negative,Cluster_6,Other Complaints
+instagram,Amazon,i demand my money back amazon! fraudulent refusal to refund.,negative,Cluster_2,Refund & Payment Issues
+reddit,Amazon,Not what I expected from Amazon. Looks fake and cheap.,negative,Cluster_2,Other Complaints
+instagram,Flipkart,The item I received from Flipkart is broken and counterfeit.,negative,Cluster_6,Product Quality Issues
+facebook,Paytm,Never got my delivery from @Paytm. Worst service ever.,negative,Cluster_5,Delivery Issues
+facebook,Zomato,Why is it impossible to get help from a representative at Zomato?,negative,Cluster_1,Customer Service
+instagram,Amazon,Where is my money @Amazon? Refund not processed after return #scam,negative,Cluster_2,Refund & Payment Issues
+instagram,Zomato,Tracking status says delivered but I received nothing from Zomato.,negative,Cluster_1,Delivery Issues
+twitter,Paytm,App freezes every time I open the search tab on Paytm.,negative,Cluster_5,App & Technical Issues
+twitter,Swiggy,tracking status says delivered but i received nothing from swiggy.,negative,Cluster_3,Delivery Issues
+instagram,PhonePe,I demand my money back PhonePe! Fraudulent refusal to refund.,negative,Cluster_4,Refund & Payment Issues
+reddit,Swiggy,Fix your buggy and glitchy app @Swiggy! Buttons don't respond.,negative,Cluster_3,App & Technical Issues
+twitter,Swiggy,Overcharged by Swiggy on checkout and support refuses to adjust the bill.,negative,Cluster_3,Refund & Payment Issues
+twitter,Paytm,The packaging from @Paytm was completely crushed and leaking.,negative,Cluster_0,Product Quality Issues
+twitter,PhonePe,"Returned the order 10 days ago, still no sign of refund from PhonePe.",negative,Cluster_4,Refund & Payment Issues
+instagram,Flipkart,Support representative closed my ticket without resolving anything on Flipkart.,negative,Cluster_6,Customer Service
+twitter,Amazon,The packaging from @Amazon was completely crushed and leaking.,negative,Cluster_0,Product Quality Issues
+reddit,Zomato,Where is my money @Zomato? Refund not processed after return #scam,negative,Cluster_1,Refund & Payment Issues
+facebook,PhonePe,Received a spoiled item from PhonePe. Horrible quality check.,negative,Cluster_4,Product Quality Issues
+reddit,PhonePe,The PhonePe app keeps crashing constantly when I try to pay.,negative,Cluster_4,App & Technical Issues
+instagram,PhonePe,I demand my money back PhonePe! Fraudulent refusal to refund.,negative,Cluster_4,Refund & Payment Issues
+facebook,Amazon,Amazon charged my account twice for the exact same order.,negative,Cluster_2,Refund & Payment Issues
+facebook,Amazon,Fix your buggy and glitchy app @Amazon! Buttons don't respond.,negative,Cluster_2,App & Technical Issues
+instagram,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4,Delivery Issues
+instagram,Flipkart,Flipkart website is completely broken on checkout page.,negative,Cluster_6,App & Technical Issues
+reddit,Amazon,Fix your buggy and glitchy app @Amazon! Buttons don't respond.,negative,Cluster_2,App & Technical Issues
+reddit,Swiggy,Why is it impossible to get help from a representative at Swiggy?,negative,Cluster_3,Customer Service
+reddit,Amazon,Support representative closed my ticket without resolving anything on Amazon.,negative,Cluster_2,Customer Service
+twitter,Swiggy,"The automated bot on Swiggy is useless, can never speak to a human.",negative,Cluster_3,Other Complaints
+twitter,Paytm,Terrible quality from Paytm. Defective product right out of the box.,negative,Cluster_5,Product Quality Issues
+facebook,Swiggy,Refund marked processed but not reflecting in my bank account from Swiggy.,negative,Cluster_3,Refund & Payment Issues
+twitter,PhonePe,Terrible quality from PhonePe. Defective product right out of the box.,negative,Cluster_4,Product Quality Issues
+instagram,Flipkart,Flipkart arbitrarily rejected my valid return and refund claim.,negative,Cluster_6,Refund & Payment Issues
+facebook,Paytm,Why did my subscription for Paytm auto-renew after I cancelled?,negative,Cluster_5,Pricing & Subscription Issues
+facebook,Swiggy,Support representative closed my ticket without resolving anything on Swiggy.,negative,Cluster_3,Customer Service
+facebook,Paytm,"The automated bot on Paytm is useless, can never speak to a human.",negative,Cluster_5,Other Complaints
+instagram,Flipkart,"Can't log into my Flipkart account, getting internal error 500.",negative,Cluster_6,App & Technical Issues
+reddit,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4,Refund & Payment Issues
+facebook,Swiggy,Why did my subscription for Swiggy auto-renew after I cancelled?,negative,Cluster_3,Pricing & Subscription Issues
+instagram,PhonePe,Support representative closed my ticket without resolving anything on PhonePe.,negative,Cluster_4,Customer Service
+instagram,PhonePe,PhonePe customer support is totally unresponsive and useless.,negative,Cluster_4,Customer Service
+instagram,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4,Refund & Payment Issues
+reddit,Amazon,The packaging from @Amazon was completely crushed and leaking.,negative,Cluster_0,Product Quality Issues
+facebook,Zomato,Zomato arbitrarily rejected my valid return and refund claim.,negative,Cluster_1,Refund & Payment Issues
+instagram,Amazon,Fix your buggy and glitchy app @Amazon! Buttons don't respond.,negative,Cluster_2,App & Technical Issues
+twitter,Zomato,"Late delivery again, Zomato is so inconsistent and delayed.",negative,Cluster_1,Delivery Issues
+instagram,Amazon,Received a spoiled item from Amazon. Horrible quality check.,negative,Cluster_0,Product Quality Issues
+facebook,Amazon,Payment failed but the money was deducted from my bank by Amazon.,negative,Cluster_2,Refund & Payment Issues
+facebook,Amazon,Waited 4 hours for my food delivery from @Amazon. Disgraceful delay.,negative,Cluster_2,Delivery Issues
+reddit,Amazon,The item I received from Amazon is broken and counterfeit.,negative,Cluster_2,Product Quality Issues
+instagram,Swiggy,My billing invoice from Swiggy has duplicate charges and incorrect tax.,negative,Cluster_3,Refund & Payment Issues
+facebook,Amazon,Support representative closed my ticket without resolving anything on Amazon.,negative,Cluster_2,Customer Service
+twitter,Flipkart,Overcharged by Flipkart on checkout and support refuses to adjust the bill.,negative,Cluster_6,Refund & Payment Issues
+instagram,Paytm,Why did my subscription for Paytm auto-renew after I cancelled?,negative,Cluster_5,Pricing & Subscription Issues
+instagram,PhonePe,Where is my money @PhonePe? Refund not processed after return #scam,negative,Cluster_4,Refund & Payment Issues
+instagram,Zomato,Waited 4 hours for my food delivery from @Zomato. Disgraceful delay.,negative,Cluster_1,Delivery Issues
+instagram,Amazon,Critical bug in Amazon app: cart empties itself on checkout.,negative,Cluster_2,App & Technical Issues
+facebook,Swiggy,Waited 4 hours for my food delivery from @Swiggy. Disgraceful delay.,negative,Cluster_3,Delivery Issues
+facebook,Swiggy,still waiting for my pending refund from swiggy after 3 weeks.,negative,Cluster_3,Refund & Payment Issues
+reddit,Swiggy,"The automated bot on Swiggy is useless, can never speak to a human.",negative,Cluster_3,Other Complaints
+instagram,PhonePe,Terrible quality from PhonePe. Defective product right out of the box.,negative,Cluster_4,Product Quality Issues
+facebook,Zomato,Zomato charged my account twice for the exact same order.,negative,Cluster_1,Refund & Payment Issues
+facebook,Paytm,The item I received from Paytm is broken and counterfeit.,negative,Cluster_5,Product Quality Issues
+facebook,Amazon,Amazon charged my account twice for the exact same order.,negative,Cluster_2,Refund & Payment Issues
+twitter,Paytm,Why did my subscription for Paytm auto-renew after I cancelled?,negative,Cluster_5,Pricing & Subscription Issues
+twitter,PhonePe,Package arrived completely damaged due to careless handling by PhonePe.,negative,Cluster_4,Product Quality Issues
+instagram,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1,Refund & Payment Issues
+facebook,PhonePe,Waited 4 hours for my food delivery from @PhonePe. Disgraceful delay.,negative,Cluster_4,Delivery Issues
+twitter,PhonePe,"Can't log into my PhonePe account, getting internal error 500.",negative,Cluster_4,App & Technical Issues
+reddit,PhonePe,critical bug in phonepe app: cart empties itself on checkout.,negative,Cluster_4,App & Technical Issues
+reddit,Amazon,Worst customer service experience ever with @Amazon. Rude agents.,negative,Cluster_2,Customer Service
+twitter,Zomato,The packaging from @Zomato was completely crushed and leaking.,negative,Cluster_0,Product Quality Issues
+twitter,Zomato,"Returned the order 10 days ago, still no sign of refund from Zomato.",negative,Cluster_1,Refund & Payment Issues
+twitter,Amazon,Still waiting for my pending refund from Amazon after 3 weeks.,negative,Cluster_2,Refund & Payment Issues
+facebook,PhonePe,PhonePe arbitrarily rejected my valid return and refund claim.,negative,Cluster_4,Refund & Payment Issues
+facebook,Paytm,"Late delivery again, Paytm is so inconsistent and delayed.",negative,Cluster_5,Delivery Issues
+instagram,Swiggy,"Returned the order 10 days ago, still no sign of refund from Swiggy.",negative,Cluster_3,Refund & Payment Issues
+twitter,Flipkart,Been stuck on hold for 45 mins with Flipkart phone support.,negative,Cluster_6,Customer Service
+reddit,Swiggy,Why did my subscription for Swiggy auto-renew after I cancelled?,negative,Cluster_3,Pricing & Subscription Issues
+reddit,Zomato,The Zomato app keeps crashing constantly when I try to pay.,negative,Cluster_1,App & Technical Issues
+facebook,PhonePe,Received a spoiled item from PhonePe. Horrible quality check.,negative,Cluster_4,Product Quality Issues
+twitter,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4,App & Technical Issues
+twitter,PhonePe,"Returned the order 10 days ago, still no sign of refund from PhonePe.",negative,Cluster_4,Refund & Payment Issues
+reddit,Paytm,"Food from Paytm was cold, stale, and smelled awful.",negative,Cluster_5,Product Quality Issues
+facebook,Swiggy,Fix your buggy and glitchy app @Swiggy! Buttons don't respond.,negative,Cluster_3,App & Technical Issues
+instagram,Zomato,Overcharged by Zomato on checkout and support refuses to adjust the bill.,negative,Cluster_1,Refund & Payment Issues
+instagram,Zomato,Still waiting for my pending refund from Zomato after 3 weeks.,negative,Cluster_1,Refund & Payment Issues
+twitter,Flipkart,The packaging from @Flipkart was completely crushed and leaking.,negative,Cluster_0,Product Quality Issues
+reddit,Flipkart,fix your buggy and glitchy app @flipkart! buttons don't respond.,negative,Cluster_6,App & Technical Issues
+twitter,Swiggy,Received a spoiled item from Swiggy. Horrible quality check.,negative,Cluster_3,Product Quality Issues
+facebook,PhonePe,The item I received from PhonePe is broken and counterfeit.,negative,Cluster_4,Product Quality Issues
+instagram,PhonePe,Still waiting for my pending refund from PhonePe after 3 weeks.,negative,Cluster_4,Refund & Payment Issues
+facebook,Amazon,My billing invoice from Amazon has duplicate charges and incorrect tax.,negative,Cluster_2,Refund & Payment Issues
+facebook,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4,App & Technical Issues
+twitter,Swiggy,"Can't log into my Swiggy account, getting internal error 500.",negative,Cluster_3,App & Technical Issues
+instagram,Swiggy,"Returned the order 10 days ago, still no sign of refund from Swiggy.",negative,Cluster_3,Refund & Payment Issues
+instagram,Flipkart,Been stuck on hold for 45 mins with Flipkart phone support.,negative,Cluster_6,Customer Service
+instagram,Swiggy,My order from Swiggy is 3 days late! 😡 #fail #terrible,negative,Cluster_3,Other Complaints
+twitter,PhonePe,The PhonePe app keeps crashing constantly when I try to pay.,negative,Cluster_4,App & Technical Issues
+twitter,Zomato,Zomato website is completely broken on checkout page.,negative,Cluster_1,App & Technical Issues
+facebook,PhonePe,My billing invoice from PhonePe has duplicate charges and incorrect tax.,negative,Cluster_4,Refund & Payment Issues
+reddit,Amazon,Where is my money @Amazon? Refund not processed after return #scam,negative,Cluster_2,Refund & Payment Issues
+instagram,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4,App & Technical Issues
+facebook,Swiggy,Support representative closed my ticket without resolving anything on Swiggy.,negative,Cluster_3,Customer Service
+twitter,Amazon,Not what I expected from Amazon. Looks fake and cheap.,negative,Cluster_2,Other Complaints
+reddit,Paytm,Hidden fees and unauthorized charges on Paytm? Disgusting practice.,negative,Cluster_5,Other Complaints
+facebook,Paytm,"Returned the order 10 days ago, still no sign of refund from Paytm.",negative,Cluster_5,Refund & Payment Issues
+facebook,Zomato,Terrible quality from Zomato. Defective product right out of the box.,negative,Cluster_1,Product Quality Issues
+reddit,Zomato,Zomato website is completely broken on checkout page.,negative,Cluster_1,App & Technical Issues
+instagram,PhonePe,App freezes every time I open the search tab on PhonePe.,negative,Cluster_4,App & Technical Issues
+facebook,Zomato,Why is it impossible to get help from a representative at Zomato?,negative,Cluster_1,Customer Service
+facebook,Zomato,Waited 4 hours for my food delivery from @Zomato. Disgraceful delay.,negative,Cluster_1,Delivery Issues
+twitter,Swiggy,The item I received from Swiggy is broken and counterfeit.,negative,Cluster_3,Product Quality Issues
+instagram,Amazon,Why did my subscription for Amazon auto-renew after I cancelled?,negative,Cluster_2,Pricing & Subscription Issues
+twitter,PhonePe,Why is it impossible to get help from a representative at PhonePe?,negative,Cluster_4,Customer Service
+instagram,Paytm,Never got my delivery from @Paytm. Worst service ever.,negative,Cluster_5,Delivery Issues
+twitter,Amazon,Support representative closed my ticket without resolving anything on Amazon.,negative,Cluster_2,Customer Service
