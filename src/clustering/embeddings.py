@@ -32,30 +32,28 @@ class SentenceEmbeddingGenerator:
         cleaned = []
         for s in sentences:
             if s is None:
-                continue
-            if isinstance(s, str) and s.strip():
-                cleaned.append(s.strip())
+                cleaned.append("")
+            elif isinstance(s, str):
+                cleaned.append(s.strip() if s.strip() else "")
+            else:
+                cleaned.append(str(s).strip())
         return cleaned
-                #str conv to vec code
+
     def encode(self, sentences: List[str]) -> np.ndarray:
         if not isinstance(sentences, list):
             raise TypeError("`sentences` must be a list of strings")
 
-        #preserve
         cleaned = self._clean_inputs(sentences)
         if not cleaned:
             dim = self.model.get_sentence_embedding_dimension()
             return np.empty((0, dim))
 
-        
-        embeddings = self.model.encode(cleaned, batch_size=32, normalize_embeddings=True)
+        embeddings = self.model.encode(cleaned, batch_size=64, normalize_embeddings=True)
         return np.asarray(embeddings)
-
 
     def __call__(self, sentences: List[str]) -> np.ndarray: 
         return self.encode(sentences)
 
-#Export 
 embedding_generator = SentenceEmbeddingGenerator()
 
 __all__ = ["SentenceEmbeddingGenerator", "embedding_generator"]
