@@ -2,521 +2,411 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
 
-# Page settings
+# ----------------------------------
+# Page Settings
+# ----------------------------------
+
 st.set_page_config(
     page_title="Brand Complaint Analyzer",
     page_icon="📊",
     layout="wide"
 )
 
-# Load data
-@st.cache_data
-def load_data():
-    return pd.read_csv("final_results.csv")
-
-try:
-    df = load_data()
-except FileNotFoundError:
-    st.error("final_results.csv not found. Run topic_model.py first.")
-    st.stop()
-
-# Check required columns
-required = [
-    "platform", "brand", "comment",
-    "sentiment", "complaint_category"
-]
-
-missing = [col for col in required if col not in df.columns]
-
-if missing:
-    st.error(f"Missing columns: {missing}")
-    st.stop()
-
-# Title
 st.title("📊 Social Media Brand Sentiment & Complaint Clusterer")
+
 st.write(
-    "Analyze negative feedback and discover "
-    "the most common customer complaints."
+    "Analyze social media feedback, explore comment clusters, "
+    "identify complaint categories, and view recommendations."
 )
 
 st.divider()
 
-# Sidebar filters
+# ----------------------------------
+# File Loading
+# ----------------------------------
+
+DATA_FILE = "clustered_comments.csv"
+RESULT_FILE = "final_results.csv"
+AI_FILE = "ai_recommendations.csv"
+
+
+@st.cache_data
+def load_csv(filename):
+    return pd.read_csv(filename)
+
+
+if not Path(DATA_FILE).exists():
+    st.error(
+        "clustered_comments.csv not found. "
+        "Place Member 3's new CSV in the project folder."
+    )
+    st.stop()
+
+cluster_df = load_csv(DATA_FILE)
+
+required_columns = [
+    "platform", "brand", "comment", "sentiment", "cluster"
+]
+
+missing = [c for c in required_columns if c not in cluster_df.columns]
+
+if missing:
+    st.error(f"Missing columns in clustered_comments.csv: {missing}")
+    st.stop()
+
+# Clean text fields without changing the original file.
+for col in ["platform", "brand", "comment", "sentiment", "cluster"]:
+    cluster_df[col] = cluster_df[col].astype("string").str.strip()
+
+cluster_df["sentiment_clean"] = (
+    cluster_df["sentiment"].str.lower()
+)
+
+# ----------------------------------
+# Sidebar Filters
+# ----------------------------------
+
 st.sidebar.header("Filters")
 
-platforms = sorted(df["platform"].dropna().unique())
+platforms = sorted(cluster_df["platform"].dropna().unique().tolist())
 
 selected_platforms = st.sidebar.multiselect(
-    "Select platforms",
+    "Platforms",
     platforms,
     default=platforms
 )
 
-categories = sorted(
-    df["complaint_category"].dropna().unique()
+sentiments = ["Positive", "Negative", "Neutral"]
+
+selected_sentiments = st.sidebar.multiselect(
+    "Sentiment",
+    sentiments,
+    default=sentiments
 )
 
-selected_categories = st.sidebar.multiselect(
-    "Select complaint categories",
-    categories,
-    default=categories
-)
-
-# Apply filters
-filtered_df = df[
-    df["platform"].isin(selected_platforms)
-    & df["complaint_category"].isin(selected_categories)
+filtered_all = cluster_df[
+    cluster_df["platform"].isin(selected_platforms)
+    & cluster_df["sentiment_clean"].isin(
+        [s.lower() for s in selected_sentiments]
+    )
 ].copy()
 
-# Search comments
 search = st.text_input("🔎 Search comments")
 
 if search:
-    filtered_df = filtered_df[
-        filtered_df["comment"].str.contains(
+    filtered_all = filtered_all[
+        filtered_all["comment"].str.contains(
             search, case=False, na=False
         )
     ]
 
-# Metrics
-st.subheader("Complaint Overview")
+# ----------------------------------
+# Overall Sentiment
+# ----------------------------------
 
-total = len(filtered_df)
-category_count = filtered_df["complaint_category"].nunique()
-platform_count = filtered_df["platform"].nunique()
+st.header("😊 Overall Sentiment")
 
-col1, col2, col3 = st.columns(3)
+sentiment_counts = (
+    filtered_all["sentiment_clean"]
+    .value_counts()
+    .reindex(["positive", "negative", "neutral"], fill_value=0)
+)
 
-col1.metric("Negative Comments", total)
-col2.metric("Complaint Categories", category_count)
-col3.metric("Platforms", platform_count)
+c1, c2, c3, c4 = st.columns(4)
 
-st.caption(
-    "These metrics reflect the currently selected filters."
+c1.metric("Comments", f"{len(filtered_all):,}")
+c2.metric("Positive", f"{int(sentiment_counts['positive']):,}")
+c3.metric("Negative", f"{int(sentiment_counts['negative']):,}")
+c4.metric("Neutral", f"{int(sentiment_counts['neutral']):,}")
+
+sentiment_chart = pd.DataFrame({
+    "Sentiment": ["Positive", "Negative", "Neutral"],
+    "Comments": [
+        int(sentiment_counts["positive"]),
+        int(sentiment_counts["negative"]),
+        int(sentiment_counts["neutral"])
+    ]
+})
+
+fig_sentiment = px.pie(
+    sentiment_chart,
+    names="Sentiment",
+    values="Comments",
+    hole=0.4,
+    title="Sentiment Distribution"
+)
+
+st.plotly_chart(fig_sentiment, use_container_width=True)
+
+st.download_button(
+    "Download Filtered Comments",
+    data=filtered_all.drop(
+        columns=["sentiment_clean"], errors="ignore"
+    ).to_csv(index=False).encode("utf-8"),
+    file_name="filtered_comments.csv",
+    mime="text/csv"
 )
 
 st.divider()
 
-# Complaint category chart
-st.subheader("Complaints by Category")
+# ----------------------------------
+# Member 3: Clustering Analysis
+# ----------------------------------
 
-if not filtered_df.empty:
-    counts = filtered_df["complaint_category"].value_counts()
+st.header("🧠 Member 3's Clustering Analysis")
 
-    fig = px.bar(
-        x=counts.index,
-        y=counts.values,
-        text=counts.values,
-        labels={
-            "x": "Complaint Category",
-            "y": "Number of Comments"
-        },
-        title="Number of Complaints in Each Category"
+st.caption(
+    "These are the cluster labels provided in Member 3's CSV. "
+    "Missing cluster labels are excluded from the cluster chart."
+)
+
+clustered = filtered_all[
+    filtered_all["cluster"].notna()
+    & (filtered_all["cluster"] != "")
+].copy()
+
+if clustered.empty:
+    st.warning("No clustered comments match the current filters.")
+else:
+    cluster_counts = (
+        clustered.groupby("cluster")
+        .size()
+        .reset_index(name="Comment Count")
+        .sort_values("Comment Count", ascending=False)
     )
-
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Percentage report
-    report = counts.reset_index()
-    report.columns = ["Complaint Category", "Comments"]
-
-    report["Percentage"] = (
-        report["Comments"] / report["Comments"].sum() * 100
-    ).round(1)
-
-    st.subheader("Complaint Summary")
-    st.dataframe(report, use_container_width=True)
-
-    # Platform chart
-    st.subheader("Complaints by Platform")
-
-    platform_counts = filtered_df["platform"].value_counts()
-
-    fig2 = px.pie(
-        names=platform_counts.index,
-        values=platform_counts.values,
-        title="Share of Filtered Complaints by Platform"
-    )
-
-    st.plotly_chart(fig2, use_container_width=True)
-
-    # Complaint table
-    st.subheader("Complaint Details")
 
     st.dataframe(
-        filtered_df[
-            [
-                "platform",
-                "brand",
-                "comment",
-                "sentiment",
-                "complaint_category"
-            ]
-        ],
+        cluster_counts,
         use_container_width=True,
         hide_index=True
     )
 
-    # Download filtered data
-    csv_data = filtered_df.to_csv(index=False).encode("utf-8")
+    fig_clusters = px.bar(
+        cluster_counts,
+        x="cluster",
+        y="Comment Count",
+        text="Comment Count",
+        title="Comments per Cluster",
+        labels={
+            "cluster": "Cluster Label",
+            "Comment Count": "Number of Comments"
+        }
+    )
+
+    st.plotly_chart(fig_clusters, use_container_width=True)
+
+    cluster_options = cluster_counts["cluster"].tolist()
+
+    chosen_cluster = st.selectbox(
+        "Inspect a cluster",
+        cluster_options
+    )
+
+    cluster_examples = clustered[
+        clustered["cluster"] == chosen_cluster
+    ]
+
+    st.subheader(f"Comments: {chosen_cluster}")
+
+    st.dataframe(
+        cluster_examples[
+            ["platform", "brand", "comment", "sentiment", "cluster"]
+        ].head(500),
+        use_container_width=True,
+        hide_index=True
+    )
+
+    st.caption("Showing at most 500 comments for readability.")
 
     st.download_button(
-        "Download Filtered Complaints CSV",
-        data=csv_data,
-        file_name="filtered_complaints.csv",
+        "Download Cluster Comments",
+        data=cluster_examples.to_csv(index=False).encode("utf-8"),
+        file_name="selected_cluster_comments.csv",
         mime="text/csv"
     )
 
+st.divider()
+
+# ----------------------------------
+# Complaint Categories
+# ----------------------------------
+
+st.header("📋 Complaint Categories")
+
+# Negative comments with a cluster label are the initial
+# complaint-analysis subset. Their labels should be validated.
+negative = filtered_all[
+    (filtered_all["sentiment_clean"] == "negative")
+    & filtered_all["cluster"].notna()
+    & (filtered_all["cluster"] != "")
+].copy()
+
+if negative.empty:
+    st.info("No negative comments with cluster labels match the filters.")
 else:
-    st.warning("No comments match your selected filters.")
-
-
-# ----------------------------------
-# Improved BERTopic Analysis
-# ----------------------------------
-
-st.divider()
-st.header("🧠 Complaint Topic Analysis")
-
-try:
-    topic_df = pd.read_csv("integrated_results.csv")
-    summary_df = pd.read_csv("topic_summary.csv")
-
-    # Remove rows with missing topic IDs
-    topic_df = topic_df.dropna(
-        subset=["discovered_topic"]
-    ).copy()
-
-    topic_df["discovered_topic"] = (
-        topic_df["discovered_topic"].astype(int)
-    )
-
-    # Keep only real discovered topics, not outliers
-    valid_topics = summary_df[
-        summary_df["Topic"] != -1
-    ].copy()
-
-    if valid_topics.empty:
-        st.warning(
-            "No regular topics were discovered. "
-            "Try collecting more varied comments."
-        )
-
-    else:
-        # Count comments in each topic
-        counts = (
-            topic_df[
-                topic_df["discovered_topic"] != -1
-            ]
-            .groupby("discovered_topic")
-            .size()
-            .to_dict()
-        )
-
-        # Add comment counts to the topic summary
-        valid_topics["Comment Count"] = (
-            valid_topics["Topic"]
-            .map(counts)
-            .fillna(0)
-            .astype(int)
-        )
-
-        # Display topic names and descriptions
-        st.subheader("Discovered Topics")
-
-        display_columns = [
-            col for col in [
-                "Topic",
-                "Name",
-                "Representation",
-                "Comment Count"
-            ]
-            if col in valid_topics.columns
-        ]
-
-        st.dataframe(
-            valid_topics[display_columns],
-            use_container_width=True,
-            hide_index=True
-        )
-
-        # Interactive chart
-        st.subheader("Topic Comparison")
-
-        chart_df = valid_topics[
-            ["Topic", "Comment Count"]
-        ].copy()
-
-        chart_df["Topic"] = (
-            "Topic " + chart_df["Topic"].astype(str)
-        )
-
-        fig = px.bar(
-            chart_df,
-            x="Topic",
-            y="Comment Count",
-            text="Comment Count",
-            title="Number of Comments per Topic"
-        )
-
-        st.plotly_chart(
-            fig,
-            use_container_width=True
-        )
-
-        # Inspect comments in a selected topic
-        topic_ids = sorted(
-            valid_topics["Topic"].astype(int).tolist()
-        )
-
-        selected_topic = st.selectbox(
-            "Choose a topic to inspect",
-            topic_ids
-        )
-
-        selected_rows = topic_df[
-            topic_df["discovered_topic"] == selected_topic
-        ]
-
-        st.subheader(f"Comments in Topic {selected_topic}")
-
-        st.dataframe(
-            selected_rows[
-                [
-                    col for col in [
-                        "platform",
-                        "brand",
-                        "comment",
-                        "discovered_topic"
-                    ]
-                    if col in selected_rows.columns
-                ]
-            ],
-            use_container_width=True,
-            hide_index=True
-        )
-
-        # Download topic report
-        report_csv = valid_topics.to_csv(
-            index=False
-        ).encode("utf-8")
-
-        st.download_button(
-            "Download Topic Summary",
-            data=report_csv,
-            file_name="topic_report.csv",
-            mime="text/csv"
-        )
-
-    # Show outliers separately
-    outliers = topic_df[
-        topic_df["discovered_topic"] == -1
-    ]
-
-    with st.expander("View unassigned comments"):
-        st.write(
-            f"Unassigned comments: {len(outliers)}"
-        )
-
-        if not outliers.empty:
-            st.dataframe(
-                outliers[
-                    [
-                        col for col in [
-                            "platform",
-                            "brand",
-                            "comment"
-                        ]
-                        if col in outliers.columns
-                    ]
-                ],
-                use_container_width=True,
-                hide_index=True
-            )
-
-except FileNotFoundError:
-    st.warning(
-        "Topic files not found. Run bertopic_model.py "
-        "and integrate_topics.py first."
-    )
-
-# ----------------------------------
-# Overall Sentiment Analysis
-# ----------------------------------
-
-st.divider()
-st.header("😊 Overall Sentiment Analysis")
-
-try:
-    # Load the complete sample dataset
-    sentiment_df = pd.read_csv(
-        "sample_clustering_results.csv"
-    )
-
-    # Count positive, negative, and neutral comments
-    sentiment_counts = (
-        sentiment_df["sentiment"]
-        .str.strip()
-        .str.title()
-        .value_counts()
-        .reindex(
-            ["Positive", "Negative", "Neutral"],
-            fill_value=0
-        )
-    )
-
-    # Display sentiment chart
-    fig_sentiment = px.pie(
-        names=sentiment_counts.index,
-        values=sentiment_counts.values,
-        title="Distribution of All Sentiments",
-        hole=0.35
-    )
-
-    st.plotly_chart(
-        fig_sentiment,
-        use_container_width=True
-    )
-
-    # Display sentiment counts
-    col1, col2, col3 = st.columns(3)
-
-    col1.metric(
-        "Positive",
-        int(sentiment_counts["Positive"])
-    )
-
-    col2.metric(
-        "Negative",
-        int(sentiment_counts["Negative"])
-    )
-
-    col3.metric(
-        "Neutral",
-        int(sentiment_counts["Neutral"])
-    )
-
-except FileNotFoundError:
-    st.warning("Sample dataset was not found.")
-
-# ----------------------------------
-# Complaint Insights
-# ----------------------------------
-
-st.divider()
-st.header("💡 Complaint Insights")
-
-if not df.empty:
-    # Find the most common complaint category
     complaint_counts = (
-        df["complaint_category"].value_counts()
+        negative.groupby("cluster")
+        .size()
+        .reset_index(name="Comments")
+        .sort_values("Comments", ascending=False)
+        .rename(columns={"cluster": "Complaint Category"})
     )
 
-    top_category = complaint_counts.index[0]
-    top_count = int(complaint_counts.iloc[0])
+    total = int(complaint_counts["Comments"].sum())
 
-    percentage = (
-        top_count / len(df) * 100
+    complaint_counts["Percentage"] = (
+        complaint_counts["Comments"] / total * 100
+    ).round(1)
+
+    a, b, c = st.columns(3)
+
+    a.metric("Negative Clustered Comments", f"{total:,}")
+    b.metric("Categories / Cluster Labels", complaint_counts.shape[0])
+    c.metric("Platforms", negative["platform"].nunique())
+
+    fig_complaints = px.bar(
+        complaint_counts,
+        x="Complaint Category",
+        y="Comments",
+        text="Comments",
+        title="Negative Comments by Cluster Label"
     )
 
-    st.subheader("Most Common Complaint")
-
-    st.metric(
-        "Top Complaint Category",
-        top_category,
-        f"{percentage:.1f}% of negative comments"
-    )
-
-    # Display example comments
-    st.subheader("Example Comments")
-
-    examples = df[
-        df["complaint_category"] == top_category
-    ]
+    st.plotly_chart(fig_complaints, use_container_width=True)
 
     st.dataframe(
-        examples[
-            [
-                "platform",
-                "comment",
-                "complaint_category"
-            ]
-        ].head(5),
+        complaint_counts,
         use_container_width=True,
         hide_index=True
     )
 
-else:
-    st.info("No complaint data is available.")
+    st.subheader("Negative Comment Details")
 
-# AI Complaint Recommendation System
+    st.dataframe(
+        negative[
+            ["platform", "brand", "comment", "sentiment", "cluster"]
+        ].head(1000),
+        use_container_width=True,
+        hide_index=True
+    )
+
+    st.download_button(
+        "Download Negative Clustered Comments",
+        data=negative.to_csv(index=False).encode("utf-8"),
+        file_name="negative_clustered_comments.csv",
+        mime="text/csv"
+    )
 
 st.divider()
-st.header("🤖 AI-Generated Recommendations")
 
-try:
-    ai_df = pd.read_csv("ai_recommendations.csv")
+# ----------------------------------
+# Processed Topic Results
+# ----------------------------------
 
-    required_ai = [
-        "complaint_category",
-        "ai_recommendation"
-    ]
+st.header("🔎 Processed Topic Results")
 
-    missing_ai = [
-        col for col in required_ai
-        if col not in ai_df.columns
-    ]
+if Path(RESULT_FILE).exists():
+    results = load_csv(RESULT_FILE)
 
-    if missing_ai:
-        st.warning(
-            f"Missing columns in ai_recommendations.csv: {missing_ai}"
+    if "complaint_category" in results.columns:
+        st.caption(
+            "This section reads final_results.csv. "
+            "Regenerate that file after updating the processing scripts."
         )
 
-    elif ai_df.empty:
-        st.info("No AI recommendations are available yet.")
+        st.dataframe(
+            results.head(1000),
+            use_container_width=True,
+            hide_index=True
+        )
 
+        st.download_button(
+            "Download Processed Results",
+            data=results.to_csv(index=False).encode("utf-8"),
+            file_name="final_results.csv",
+            mime="text/csv"
+        )
     else:
-        # Show recommendations for selected categories
-        ai_df = ai_df[
-            ai_df["complaint_category"].isin(selected_categories)
-        ]
+        st.warning(
+            "final_results.csv does not contain complaint_category. "
+            "Run the updated topic processing script."
+        )
+else:
+    st.info("final_results.csv not found. Run topic_model.py first.")
+
+st.divider()
+
+# ----------------------------------
+# AI Recommendations
+# ----------------------------------
+
+st.header("🤖 Recommendations by Cluster")
+
+if not Path(AI_FILE).exists():
+    st.info(
+        "ai_recommendations.csv not found. "
+        "Run recommendations.py after processing the new data."
+    )
+else:
+    ai_df = load_csv(AI_FILE)
+
+    required_ai = [
+        "cluster", "complaint_category", "ai_recommendation"
+    ]
+
+    missing_ai = [c for c in required_ai if c not in ai_df.columns]
+
+    if missing_ai:
+        st.error(f"Missing columns in ai_recommendations.csv: {missing_ai}")
+    else:
+        if "status" in ai_df.columns:
+            ai_df = ai_df[
+                ai_df["status"].astype(str).str.lower().eq("success")
+            ]
+
+        ai_df = ai_df.drop_duplicates(
+            subset=["cluster"], keep="last"
+        )
 
         if ai_df.empty:
-            st.info(
-                "No recommendations match the selected categories."
+            st.warning(
+                "No successful recommendations found. "
+                "Check recommendations.py and its terminal output."
             )
-
         else:
-            st.write(
-                "AI-generated actions based on the customer feedback."
+            st.metric(
+                "Clusters with Recommendations",
+                ai_df["cluster"].nunique()
             )
 
             for _, row in ai_df.iterrows():
-                category = row["complaint_category"]
-                recommendation = row["ai_recommendation"]
-
-                st.subheader(f"📌 {category}")
-
-                if "number_of_comments" in ai_df.columns:
-                    st.caption(
-                        f"Comments analyzed: "
-                        f"{row['number_of_comments']}"
+                with st.container(border=True):
+                    st.subheader(
+                        f"{row['cluster']} — {row['complaint_category']}"
                     )
 
-                # Convert literal newline characters to real line breaks
-                recommendation = str(recommendation).replace(
-                    "\\n", "\n"
-                )
+                    if "number_of_comments" in ai_df.columns:
+                        st.caption(
+                            f"Comments analyzed: "
+                            f"{row['number_of_comments']}"
+                        )
 
-                st.markdown(recommendation)
-                st.divider()
+                    st.markdown(
+                        str(row["ai_recommendation"]).replace(
+                            "\\n", "\n"
+                        )
+                    )
 
-except FileNotFoundError:
-    st.warning(
-        "ai_recommendations.csv was not found. "
-        "Run `python recommendations.py` first."
-    )
+            st.download_button(
+                "Download Recommendations",
+                data=ai_df.to_csv(index=False).encode("utf-8"),
+                file_name="ai_recommendations.csv",
+                mime="text/csv"
+            )
 
-
-
+st.caption(
+    "Note: Cluster labels are supplied by Member 3. "
+    "They should be reviewed before being treated as confirmed complaint categories."
+)
