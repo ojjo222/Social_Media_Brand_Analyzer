@@ -2,3 +2,6 @@
 streamlit
 pandas
 plotly
+bertopic
+openai
+python-dotenv

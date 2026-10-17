@@ -1,79 +1,50 @@
 
 import pandas as pd
+from pathlib import Path
 
-# File to check
-file_name = "sample_clustering_results.csv"
+FILE = Path("clustered_comments.csv")
 
-# Required columns
-required_columns = [
-    "platform",
-    "brand",
-    "comment",
-    "sentiment",
-    "cluster"
+if not FILE.exists():
+    raise SystemExit("Error: clustered_comments.csv not found.")
+
+df = pd.read_csv(FILE)
+
+required = [
+    "platform", "brand", "comment", "sentiment", "cluster"
 ]
 
-try:
-    df = pd.read_csv(file_name)
+missing = [col for col in required if col not in df.columns]
 
-    print("\nDATA VALIDATION REPORT")
+if missing:
+    raise SystemExit(f"Missing columns: {missing}")
 
-    # Check columns
-    missing_columns = [
-        col for col in required_columns
-        if col not in df.columns
-    ]
+print("\nDATA VALIDATION")
+print("-" * 40)
+print("Total rows:", len(df))
+print("Total columns:", len(df.columns))
 
-    if missing_columns:
-        print("Missing columns:", missing_columns)
-    else:
-        print("All required columns are present.")
+print("\nMissing values:")
+print(df[required].isna().sum().to_string())
 
-    # Check empty comments
-    if "comment" in df.columns:
-        empty_comments = (
-            df["comment"].isna()
-            | df["comment"].astype(str).str.strip().eq("")
-        )
+print("\nSentiment counts:")
+print(
+    df["sentiment"]
+    .astype("string")
+    .str.strip()
+    .str.lower()
+    .value_counts(dropna=False)
+    .to_string()
+)
 
-        print(
-            "Empty comments:",
-            int(empty_comments.sum())
-        )
+print("\nRows by cluster:")
+print(
+    df["cluster"]
+    .fillna("Unclustered")
+    .astype(str)
+    .value_counts()
+    .to_string()
+)
 
-    # Check sentiment labels
-    if "sentiment" in df.columns:
-        valid_sentiments = [
-            "positive",
-            "negative",
-            "neutral"
-        ]
+print("\nDuplicate comments:", df["comment"].duplicated().sum())
 
-        actual = (
-            df["sentiment"]
-            .dropna()
-            .astype(str)
-            .str.strip()
-            .str.lower()
-        )
-
-        invalid = ~actual.isin(valid_sentiments)
-
-        print(
-            "Invalid sentiment labels:",
-            int(invalid.sum())
-        )
-
-    # Check duplicate rows
-    print(
-        "Duplicate rows:",
-        int(df.duplicated().sum())
-    )
-
-    print("Total rows:", len(df))
-
-except FileNotFoundError:
-    print("CSV file not found:", file_name)
-
-except pd.errors.ParserError:
-    print("Could not read the CSV. Check its formatting.")
+print("\nValidation complete.")
